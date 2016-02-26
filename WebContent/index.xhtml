@@ -97,7 +97,19 @@
 				id="tooltipStatus"
 				for="commandButtonStatus"
 				value="AjaxStatus is a global indicator to provide feedback about the ongoing ajax request. 
-				This page has two AjaxStatus components, one with facet driven declarative approach and the other one using callbacks. "
+				This page has two AjaxStatus components, one with facet driven declarative approach and the other one using callbacks."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Event"
+				id="commandButtonEvent"
+				action="ajaxcore/event?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipEvent"
+				for="commandButtonEvent"
+				value="p:ajax enables ajax features on supported components."
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
