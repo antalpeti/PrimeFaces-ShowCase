@@ -1,4 +1,4 @@
-package io.github.antalpeti.primefaces.ajaxcore.beans;
+package io.github.antalpeti.primefaces.ajaxcore.showcase.beans;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
