@@ -23,9 +23,10 @@
 			<p:tooltip
 				id="tooltipBasic"
 				for="commandButtonBasic"
-				value="This example demonstrates a simple but common usage of posting the form, updating the backend value and displaying the output with ajax."
+				value="This example demonstrates a simple but common usage of posting the form, 
+				updating the backend value and displaying the output with ajax."
 				showEffect="clip"
-				hideEffect="explode" 
+				hideEffect="explode"
 				trackMouse="true" />
 			<p:commandButton
 				value="Listener"
@@ -37,7 +38,7 @@
 				for="commandButtonListener"
 				value="A java method can be invoked in an ajax request using listener option of p:ajax."
 				showEffect="clip"
-				hideEffect="explode" 
+				hideEffect="explode"
 				trackMouse="true" />
 			<p:commandButton
 				value="Process"
@@ -49,7 +50,7 @@
 				for="commandButtonProcess"
 				value="Partial processing enables executing certain components while ignoring others during a request."
 				showEffect="clip"
-				hideEffect="explode" 
+				hideEffect="explode"
 				trackMouse="true" />
 			<p:commandButton
 				value="Dropdown"
@@ -61,7 +62,7 @@
 				for="commandButtonDropdown"
 				value="Dependent dropdowns implemented with p:ajax behavior."
 				showEffect="clip"
-				hideEffect="explode" 
+				hideEffect="explode"
 				trackMouse="true" />
 			<p:commandButton
 				value="Selector"
@@ -73,7 +74,7 @@
 				for="commandButtonSelector"
 				value="PFS (PrimeFaces Selectors) enables using jQuery Selector API when referencing components."
 				showEffect="clip"
-				hideEffect="explode" 
+				hideEffect="explode"
 				trackMouse="true" />
 			<p:commandButton
 				value="Poll"
@@ -85,7 +86,20 @@
 				for="commandButtonPoll"
 				value="Poll component makes ajax calls periodically."
 				showEffect="clip"
-				hideEffect="explode" 
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Status"
+				id="commandButtonStatus"
+				action="ajaxcore/status?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipStatus"
+				for="commandButtonStatus"
+				value="AjaxStatus is a global indicator to provide feedback about the ongoing ajax request. 
+				This page has two AjaxStatus components, one with facet driven declarative approach and the other one using callbacks. "
+				showEffect="clip"
+				hideEffect="explode"
 				trackMouse="true" />
 		</h:form>
 	</p:panel>
