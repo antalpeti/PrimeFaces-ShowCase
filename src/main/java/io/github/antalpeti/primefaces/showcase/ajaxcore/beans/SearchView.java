@@ -1,13 +1,12 @@
-package io.github.antalpeti.primefaces.ajaxcore.showcase.beans;
+package io.github.antalpeti.primefaces.showcase.ajaxcore.beans;
 
 import javax.faces.bean.ManagedBean;
- 
-@ManagedBean(name="ajaxcoreSelectorView")
-public class SelectorView {
+
+@ManagedBean(name="ajaxcoreSearchView")
+public class SearchView {
      
     private String text1;   
     private String text2;
-    private String text3;
  
     public String getText1() {
         return text1;
@@ -23,13 +22,5 @@ public class SelectorView {
  
     public void setText2(String text2) {
         this.text2 = text2;
-    }
- 
-    public String getText3() {
-        return text3;
-    }
- 
-    public void setText3(String text3) {
-        this.text3 = text3;
     }
 }

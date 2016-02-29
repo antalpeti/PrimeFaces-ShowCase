@@ -1,4 +1,4 @@
-package io.github.antalpeti.primefaces.ajaxcore.showcase.beans;
+package io.github.antalpeti.primefaces.showcase.ajaxcore.beans;
 
 import java.io.Serializable;
 
