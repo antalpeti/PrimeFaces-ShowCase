@@ -192,5 +192,25 @@
 				trackMouse="true" />
 		</h:form>
 	</p:panel>
+	<p:panel
+			header="Input"
+			toggleable="true"
+			toggleSpeed="500">
+			<h:form id="formInput">
+				<p:commandButton
+					value="AutoComplete"
+					id="commandButtonAutoComplete"
+					action="input/autoComplete?faces-redirect=true"
+					styleClass="ui-priority-primary" />
+				<p:tooltip
+					id="tooltipAutoComplete"
+					for="commandButtonAutoComplete"
+					value=" AutoComplete displays suggestions while the input is being type. 
+					AutoComplete features various options, customizable content, multiple selection, effects and events."
+					showEffect="clip"
+					hideEffect="explode"
+					trackMouse="true" />
+			</h:form>
+		</p:panel>
 </h:body>
 </html>
