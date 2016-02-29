@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Fragment</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<h:panelGrid
+			columns="2"
+			cellpadding="5">
+			<p:outputLabel
+				for="ignored"
+				value="Required" />
+			<p:inputText
+				id="ignored"
+				required="true" />
+		</h:panelGrid>
+
+		<p:fragment autoUpdate="true">
+			<h:panelGrid
+				columns="4"
+				cellpadding="5">
+				<p:outputLabel
+					for="txt"
+					value="Text Value:" />
+				<p:inputText
+					id="txt"
+					value="#{ajaxcoreBasicView.text}" />
+				<p:commandButton value="Submit" />
+				<h:outputText value="#{ajaxcoreBasicView.text}" />
+			</h:panelGrid>
+		</p:fragment>
+	</h:form>
+</h:body>
+
+</html>
