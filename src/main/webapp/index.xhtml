@@ -113,6 +113,18 @@
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
+			<p:commandButton
+				value="Counter"
+				id="commandButtonCounter"
+				action="ajaxcore/counter?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipCounter"
+				for="commandButtonCounter"
+				value="An integer variable is incremented each time the button is clicked and current value is updated with ajax. "
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
 		</h:form>
 	</p:panel>
 </h:body>
