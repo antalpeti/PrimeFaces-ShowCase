@@ -121,7 +121,19 @@
 			<p:tooltip
 				id="tooltipCounter"
 				for="commandButtonCounter"
-				value="An integer variable is incremented each time the button is clicked and current value is updated with ajax. "
+				value="An integer variable is incremented each time the button is clicked and current value is updated with ajax."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Validation"
+				id="commandButtonValidation"
+				action="ajaxcore/validation?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipValidation"
+				for="commandButtonValidation"
+				value="Validations are executed on the server side and page is updated with the result."
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
