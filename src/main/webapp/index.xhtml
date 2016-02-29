@@ -178,6 +178,18 @@
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
+			<p:commandButton
+				value="RemoteCommand"
+				id="commandButtonRemoteCommand"
+				action="ajaxcore/remoteCommand?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipRemoteCommand"
+				for="commandButtonRemoteCommand"
+				value="RemoteCommand provides a simple way to execute backing bean methods with javascript."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
 		</h:form>
 	</p:panel>
 </h:body>
