@@ -218,7 +218,19 @@
 				<p:tooltip
 					id="tooltipBooleanButton"
 					for="commandButtonBooleanButton"
-					value="SelectBooleanButton is used to select a boolean value using a button. "
+					value="SelectBooleanButton is used to select a boolean value using a button."
+					showEffect="clip"
+					hideEffect="explode"
+					trackMouse="true" />
+				<p:commandButton
+					value="Calendar"
+					id="commandButtonCalendar"
+					action="input/calendar?faces-redirect=true"
+					styleClass="ui-priority-primary" />
+				<p:tooltip
+					id="tooltipCalendar"
+					for="commandButtonCalendar"
+					value="Calendar is an input component to pick a datetime."
 					showEffect="clip"
 					hideEffect="explode"
 					trackMouse="true" />
