@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>SelectOneMenu</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:messages autoUpdate="true" />
+
+		<h:panelGrid
+			columns="2"
+			style="margin-bottom:10px"
+			cellpadding="5">
+			<p:outputLabel
+				for="console"
+				value="Basic:" />
+			<p:selectOneMenu
+				id="console"
+				value="#{inputSelectOneMenuView.console}"
+				style="width:125px">
+				<f:selectItem
+					itemLabel="Select One"
+					itemValue="" />
+				<f:selectItem
+					itemLabel="Xbox One"
+					itemValue="Xbox One" />
+				<f:selectItem
+					itemLabel="PS4"
+					itemValue="PS4" />
+				<f:selectItem
+					itemLabel="Wii U"
+					itemValue="Wii U" />
+			</p:selectOneMenu>
+
+			<p:outputLabel
+				for="car"
+				value="Grouping: " />
+			<p:selectOneMenu
+				id="car"
+				value="#{inputSelectOneMenuView.car}">
+				<f:selectItem
+					itemLabel="Select One"
+					itemValue="" />
+				<f:selectItems value="#{inputSelectOneMenuView.cars}" />
+			</p:selectOneMenu>
+
+			<p:outputLabel
+				for="city"
+				value="Editable: " />
+			<p:selectOneMenu
+				id="city"
+				value="#{inputSelectOneMenuView.city}"
+				effect="fold"
+				editable="true">
+				<f:selectItem
+					itemLabel="Select One"
+					itemValue="" />
+				<f:selectItems value="#{inputSelectOneMenuView.cities}" />
+			</p:selectOneMenu>
+
+			<p:outputLabel
+				for="advanced"
+				value="Advanced:" />
+			<p:selectOneMenu
+				id="advanced"
+				value="#{inputSelectOneMenuView.theme}"
+				converter="inputThemeConverter"
+				panelStyle="width:180px"
+				effect="fade"
+				var="t"
+				style="width:160px"
+				filter="true"
+				filterMatchMode="startsWith">
+				<f:selectItems
+					value="#{inputSelectOneMenuView.themes}"
+					var="theme"
+					itemLabel="#{theme.displayName}"
+					itemValue="#{theme}" />
+
+				<p:column style="width:10%">
+					<h:outputText styleClass="ui-theme ui-theme-#{t.name}" />
+				</p:column>
+
+				<p:column>
+					<h:outputText value="#{t.displayName}" />
+				</p:column>
+			</p:selectOneMenu>
+		</h:panelGrid>
+
+		<p:commandButton
+			value="Submit"
+			update="display"
+			oncomplete="PF('dlg').show()"
+			icon="ui-icon-check" />
+
+		<p:dialog
+			header="Values"
+			modal="true"
+			showEffect="bounce"
+			widgetVar="dlg"
+			resizable="false">
+			<p:panelGrid
+				columns="2"
+				id="display"
+				columnClasses="label,value">
+				<h:outputText value="Basic:" />
+				<h:outputText value="#{inputSelectOneMenuView.console}" />
+
+				<h:outputText value="Grouping:" />
+				<h:outputText value="#{inputSelectOneMenuView.car}" />
+
+				<h:outputText value="Editable" />
+				<h:outputText value="#{inputSelectOneMenuView.city}" />
+
+				<h:outputText value="Advanced:" />
+				<h:outputText value="#{inputSelectOneMenuView.theme.displayName}" />
+			</p:panelGrid>
+		</p:dialog>
+	</h:form>
+</h:body>
+
+</html>
