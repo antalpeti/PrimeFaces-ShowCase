@@ -66,7 +66,19 @@
 			<p:tooltip
 				id="tooltipInputText"
 				for="commandButtonInputText"
-				value="InputText extends standard InputText with skinning capabilities. "
+				value="InputText extends standard InputText with skinning capabilities."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="InputMask"
+				id="commandButtonInputMask"
+				action="input/inputMask?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipInputMask"
+				for="commandButtonInputMask"
+				value="InputMask component forces input to be formatted in a certain pattern."
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
