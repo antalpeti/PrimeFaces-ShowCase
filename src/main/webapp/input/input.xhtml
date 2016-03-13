@@ -118,6 +118,20 @@
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
+			<p:commandButton
+				value="Signature"
+				id="commandButtonSignature"
+				action="input/signature?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipSignature"
+				for="commandButtonSignature"
+				value="Signature is used to draw a signature as an input. Various options such as 
+				background color, foreground color, thickness are available for customization. 
+				Signature also supports touch enabled devices and legacy browsers without canvas support."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
 		</h:form>
 	</p:panel>
 </ui:composition>
