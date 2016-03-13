@@ -1,0 +1,189 @@
+<ui:composition
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	<p:panel
+		header="Ajax Core"
+		toggleable="true"
+		toggleSpeed="500">
+		<h:form id="formAjaxCore">
+			<p:commandButton
+				value="Basic"
+				id="commandButtonBasic"
+				action="ajaxcore/basic?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipBasic"
+				for="commandButtonBasic"
+				value="This example demonstrates a simple but common usage of posting the form, 
+				updating the backend value and displaying the output with ajax."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Listener"
+				id="commandButtonListener"
+				action="ajaxcore/listener?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipListener"
+				for="commandButtonListener"
+				value="A java method can be invoked in an ajax request using listener option of p:ajax."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Process"
+				id="commandButtonProcess"
+				action="ajaxcore/process?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipProcess"
+				for="commandButtonProcess"
+				value="Partial processing enables executing certain components while ignoring others during a request."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Dropdown"
+				id="commandButtonDropdown"
+				action="ajaxcore/dropdown?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipDropdown"
+				for="commandButtonDropdown"
+				value="Dependent dropdowns implemented with p:ajax behavior."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Selector"
+				id="commandButtonSelector"
+				action="ajaxcore/selector?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipSelector"
+				for="commandButtonSelector"
+				value="PFS (PrimeFaces Selectors) enables using jQuery Selector API when referencing components."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Poll"
+				id="commandButtonPoll"
+				action="ajaxcore/poll?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipPoll"
+				for="commandButtonPoll"
+				value="Poll component makes ajax calls periodically."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Status"
+				id="commandButtonStatus"
+				action="ajaxcore/status?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipStatus"
+				for="commandButtonStatus"
+				value="AjaxStatus is a global indicator to provide feedback about the ongoing ajax request. 
+				This page has two AjaxStatus components, one with facet driven declarative approach and the other one using callbacks."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Event"
+				id="commandButtonEvent"
+				action="ajaxcore/event?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipEvent"
+				for="commandButtonEvent"
+				value="p:ajax enables ajax features on supported components."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Counter"
+				id="commandButtonCounter"
+				action="ajaxcore/counter?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipCounter"
+				for="commandButtonCounter"
+				value="An integer variable is incremented each time the button is clicked and current value is updated with ajax."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Validation"
+				id="commandButtonValidation"
+				action="ajaxcore/validation?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipValidation"
+				for="commandButtonValidation"
+				value="Validations are executed on the server side and page is updated with the result."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Partial Submit"
+				id="commandButtonPartialSubmit"
+				action="ajaxcore/partialSubmit?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipPartialSubmit"
+				for="commandButtonPartialSubmit"
+				value="PartialSubmit reduces network traffic by only adding the partially processed components to the ajax request post. 
+				For big pages with many input components, partialSubmit is extremely useful as it leads to more lightweight requests. 
+				Compare the Post Data displayed by the logger for the difference."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Search"
+				id="commandButtonSearch"
+				action="ajaxcore/search?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipSearch"
+				for="commandButtonSearch"
+				value="Search Expression Framework extends the default search expressions by more keywords and allows the combine/nest expressions."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Fragment"
+				id="commandButtonFragment"
+				action="ajaxcore/fragment?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipFragment"
+				for="commandButtonFragment"
+				value="Fragment component is used to define automatically partially process and update sections whenever ajax request 
+				is triggered by a descandant component. In this example, required input field outside the fragment is ignored and 
+				only the contents of the fragment are processed-updated automatically on button click since button is inside the fragment. 
+				Fragment makes it easy to define partial ajax process and update without explicitly defining component identifiers."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="RemoteCommand"
+				id="commandButtonRemoteCommand"
+				action="ajaxcore/remoteCommand?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipRemoteCommand"
+				for="commandButtonRemoteCommand"
+				value="RemoteCommand provides a simple way to execute backing bean methods with javascript."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+		</h:form>
+	</p:panel>
+</ui:composition>
