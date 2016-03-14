@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Slider</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:growl
+			id="growl"
+			showDetail="true" />
+
+		<h3 style="margin-top: 0">Input Text Slider</h3>
+		<h:panelGrid
+			columns="1"
+			style="margin-bottom: 10px">
+			<p:inputText
+				id="txt1"
+				value="#{inputSliderView.number1}" />
+			<p:slider for="txt1" />
+		</h:panelGrid>
+
+		<h3>Hidden Input Slider with Display Value</h3>
+		<h:panelGrid
+			columns="1"
+			style="margin-bottom: 10px">
+			<h:outputText
+				id="output"
+				value="Set ratio to %#{inputSliderView.number2}" />
+			<h:inputHidden
+				id="txt2"
+				value="#{inputSliderView.number2}" />
+			<p:slider
+				for="txt2"
+				display="output"
+				style="width: 200px"
+				displayTemplate="Set ratio to %{value}" />
+		</h:panelGrid>
+
+		<h3>Slider with Step Factor</h3>
+		<h:panelGrid
+			columns="1"
+			style="margin-bottom: 10px">
+			<p:inputText
+				id="txt3"
+				value="#{inputSliderView.number3}" />
+			<p:slider
+				for="txt3"
+				step="10" />
+		</h:panelGrid>
+
+		<h3>Vertical Slider</h3>
+		<h:panelGrid
+			columns="1"
+			style="margin-bottom: 10px">
+			<p:inputText
+				id="txt4"
+				value="#{inputSliderView.number4}" />
+			<p:slider
+				for="txt4"
+				type="vertical" />
+		</h:panelGrid>
+
+		<h3>Ajax Slider</h3>
+		<h:panelGrid
+			columns="1"
+			style="margin-bottom: 10px">
+			<p:inputText
+				id="txt5"
+				value="#{inputSliderView.number5}" />
+			<p:slider for="txt5">
+				<p:ajax
+					event="slideEnd"
+					listener="#{inputSliderView.onSlideEnd}"
+					update="growl" />
+			</p:slider>
+		</h:panelGrid>
+
+		<h3>Range Slider</h3>
+		<h:panelGrid
+			columns="1"
+			style="margin-bottom: 10px">
+			<h:outputText
+				id="displayRange"
+				value="Between #{inputSliderView.number6} and #{inputSliderView.number7}" />
+			<p:slider
+				for="txt6,txt7"
+				display="displayRange"
+				style="width: 400px"
+				range="true"
+				displayTemplate="Between {min} and {max}" />
+		</h:panelGrid>
+		<h:inputHidden
+			id="txt6"
+			value="#{inputSliderView.number6}" />
+		<h:inputHidden
+			id="txt7"
+			value="#{inputSliderView.number7}" />
+
+		<p:separator />
+
+		<p:commandButton
+			value="Submit"
+			update="display"
+			oncomplete="PF('dlg').show();" />
+
+		<p:dialog
+			header="Slider Values"
+			showEffect="fade"
+			hideEffect="fade"
+			widgetVar="dlg">
+			<h:panelGrid
+				id="display"
+				columns="1"
+				cellpadding="5">
+				<h:outputText value="Number 1: #{inputSliderView.number1}" />
+
+				<h:outputText value="Number 2: #{inputSliderView.number2}" />
+
+				<h:outputText value="Number 3: #{inputSliderView.number3}" />
+
+				<h:outputText value="Number 4: #{inputSliderView.number4}" />
+
+				<h:outputText value="Number 5: #{inputSliderView.number5}" />
+
+				<h:outputText value="Range: [#{inputSliderView.number6},#{inputSliderView.number7}]" />
+			</h:panelGrid>
+		</p:dialog>
+	</h:form>
+</h:body>
+
+</html>
