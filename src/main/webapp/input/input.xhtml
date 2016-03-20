@@ -202,8 +202,20 @@
 			<p:tooltip
 				id="tooltipInputTextarea"
 				for="commandButtonInputTextarea"
-				value="nputTextarea extends standard InputTextarea with autoComplete, autoResize, 
+				value="InputTextarea extends standard InputTextarea with autoComplete, autoResize, 
 				remaining characters counter and theming features."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="BooleanCheckbox"
+				id="commandButtonBooleanCheckbox"
+				action="input/booleanCheckbox?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipBooleanCheckbox"
+				for="commandButtonBooleanCheckbox"
+				value="SelectBooleanCheckbox is used to select a boolean value."
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
