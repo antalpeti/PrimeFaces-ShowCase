@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>SelectManyMenu</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<h:panelGrid
+			columns="2"
+			style="margin-bottom:10px"
+			cellpadding="5"
+			columnClasses="label, value">
+			<p:outputLabel
+				for="basic"
+				value="Basic:" />
+			<p:selectManyMenu
+				id="basic"
+				value="#{inputSelectManyView.selectedOptions}">
+				<f:selectItem
+					itemLabel="Option 1"
+					itemValue="1" />
+				<f:selectItem
+					itemLabel="Option 2"
+					itemValue="2" />
+				<f:selectItem
+					itemLabel="Option 3"
+					itemValue="3" />
+			</p:selectManyMenu>
+
+			<p:outputLabel
+				for="advanced"
+				value="Advanced:" />
+			<p:selectManyMenu
+				id="advanced"
+				value="#{inputSelectManyView.selectedThemes}"
+				converter="inputThemeConverter"
+				var="t"
+				filter="true"
+				filterMatchMode="contains"
+				showCheckbox="true">
+				<f:selectItems
+					value="#{inputSelectManyView.themes}"
+					var="theme"
+					itemLabel="#{theme.displayName}"
+					itemValue="#{theme}" />
+
+				<p:column>
+					<h:outputText styleClass="ui-theme ui-theme-#{t.name}" />
+				</p:column>
+
+				<p:column>
+					<h:outputText value="#{t.displayName}" />
+				</p:column>
+			</p:selectManyMenu>
+		</h:panelGrid>
+
+		<p:separator />
+
+		<p:commandButton
+			value="Submit"
+			update="display"
+			oncomplete="PF('dlg').show()"
+			icon="ui-icon-check" />
+
+		<p:dialog
+			header="Selected Values"
+			modal="true"
+			showEffect="fade"
+			widgetVar="dlg"
+			resizable="false">
+			<p:panelGrid
+				columns="2"
+				id="display"
+				columnClasses="label,output">
+				<h:outputText value="Basic:" />
+				<p:dataList
+					value="#{inputSelectManyView.selectedOptions}"
+					var="option">
+					<h:outputText value="#{option}" />
+				</p:dataList>
+
+				<h:outputText value="Advanced:" />
+				<p:dataList
+					value="#{inputSelectManyView.selectedThemes}"
+					var="t">
+					<h:outputText value="#{t}" />
+				</p:dataList>
+			</p:panelGrid>
+		</p:dialog>
+	</h:form>
+</h:body>
+
+</html>
