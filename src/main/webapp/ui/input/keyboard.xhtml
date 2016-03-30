@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Keyboard</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<h:panelGrid
+			columns="2"
+			cellpadding="5">
+			<h:outputText value="Default Layout: " />
+			<p:keyboard
+				id="default"
+				value="#{inputKeyboardView.value1}" />
+
+			<h:outputText value="Basic QWERTY: " />
+			<p:keyboard
+				id="qwerty"
+				value="#{inputKeyboardView.value2}"
+				layout="qwertyBasic" />
+
+			<h:outputText value="Alphabetic Layout: " />
+			<p:keyboard
+				id="alphabetic"
+				value="#{inputKeyboardView.value3}"
+				layout="alphabetic" />
+
+			<h:outputText value="Custom Layout 1: " />
+			<p:keyboard
+				id="custom1"
+				value="#{inputKeyboardView.value4}"
+				layout="custom"
+				layoutTemplate="prime-back,faces-clear,rocks-close" />
+
+			<h:outputText value="Custom Layout 2: " />
+			<p:keyboard
+				id="custom2"
+				value="#{inputKeyboardView.value5}"
+				layout="custom"
+				layoutTemplate="create-space-your-close,owntemplate-shift,easily-space-spacebar" />
+
+			<h:outputText value="Default Keypad: " />
+			<p:keyboard
+				id="keypad"
+				value="#{inputKeyboardView.value6}"
+				keypadOnly="true" />
+
+			<h:outputText value="Button Mode: " />
+			<p:keyboard
+				id="buttonmode"
+				value="#{inputKeyboardView.value7}"
+				showMode="button"
+				keypadOnly="true" />
+
+			<h:outputText value="Image Mode: " />
+			<p:keyboard
+				id="image"
+				value="#{inputKeyboardView.value8}"
+				showMode="button"
+				buttonImageOnly="true"
+				buttonImage="../../resources/demo/images/keyboardpencil.png"
+				keypadOnly="true" />
+
+			<h:outputText value="Password Mode: " />
+			<p:keyboard
+				id="password"
+				value="#{inputKeyboardView.value9}"
+				password="true"
+				keypadOnly="true" />
+		</h:panelGrid>
+
+		<p:commandButton
+			value="Submit"
+			update="display"
+			oncomplete="PF('dlg').show()" />
+
+		<p:dialog
+			widgetVar="dlg"
+			showEffect="fade"
+			hideEffect="fade"
+			header="Values">
+			<h:panelGrid
+				id="display"
+				columns="2"
+				cellpadding="5">
+				<h:outputText value="Value1: " />
+				<h:outputText value="#{inputKeyboardView.value1}" />
+
+				<h:outputText value="Value2:" />
+				<h:outputText value="#{inputKeyboardView.value2}" />
+
+				<h:outputText value="Value3:" />
+				<h:outputText value="#{inputKeyboardView.value3}" />
+
+				<h:outputText value="Value4:" />
+				<h:outputText value="#{inputKeyboardView.value4}" />
+
+				<h:outputText value="Value5:" />
+				<h:outputText value="#{inputKeyboardView.value5}" />
+
+				<h:outputText value="Value6:" />
+				<h:outputText value="#{inputKeyboardView.value6}" />
+
+				<h:outputText value="Value7:" />
+				<h:outputText value="#{inputKeyboardView.value7}" />
+
+				<h:outputText value="Value8:" />
+				<h:outputText value="#{inputKeyboardView.value8}" />
+
+				<h:outputText value="Value9:" />
+				<h:outputText value="#{inputKeyboardView.value9}" />
+			</h:panelGrid>
+		</p:dialog>
+	</h:form>
+</h:body>
+
+</html>
