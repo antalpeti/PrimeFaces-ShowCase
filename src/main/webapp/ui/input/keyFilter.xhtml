@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions" >
+
+<h:head>
+	<title>KeyFilter</title>
+</h:head>
+
+<h:body>
+	<h:outputText value="Predefined masks and their regular expressions:" />
+	<h:panelGrid columns="2">
+		<h:outputText value="pint" />
+		<h:outputText value="/[\d]/" />
+		<h:outputText value="int" />
+		<h:outputText value="/[\d\-]/" />
+		<h:outputText value="pnum" />
+		<h:outputText value="/[\d\.]/" />
+		<h:outputText value="money" />
+		<h:outputText value="/[\d\.\s,]" />
+		<h:outputText value="num" />
+		<h:outputText value="/[\d\-\.]/" />
+		<h:outputText value="hex" />
+		<h:outputText value="/[0-9a-f]/i" />
+		<h:outputText value="email" />
+		<h:outputText value="/[a-z0-9_\.\-@]/i" />
+		<h:outputText value="alpha" />
+		<h:outputText value="/[a-z_]/i" />
+		<h:outputText value="alphanum" />
+		<h:outputText value="/[a-z0-9_]/i" />
+
+	</h:panelGrid>
+	<p:spacer />
+	<p:spacer />
+
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputText value="KeyFilter with regEx on a p:inputText" />
+			<p:inputText id="text1">
+				<pe:keyFilter regEx="/[ABC]/i" />
+			</p:inputText>
+
+			<h:outputText value="KeyFilter with mask on a h:inputText" />
+			<h:inputText id="text2" />
+
+			<h:outputText value="KeyFilter with testFunction on a p:autoComplete" />
+			<p:autoComplete
+				id="autoComplete1"
+				value="#{inputAutoCompleteView.txt1}"
+				completeMethod="#{inputAutoCompleteView.completeText}" />
+		</h:panelGrid>
+
+		<pe:keyFilter
+			for="text2"
+			mask="num" />
+		<pe:keyFilter
+			for="autoComplete1"
+			testFunction="return c == 'z';" />
+	</h:form>
+</h:body>
+</html>
