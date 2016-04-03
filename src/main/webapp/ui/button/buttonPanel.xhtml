@@ -18,7 +18,19 @@
 				id="tooltipButton"
 				for="commandButtonButton"
 				value="Button is an extension to the standard h:button component featuring advanced skinning 
-				capabilities. Just like h:button, button does GET requests targeting bookmarkable URLs. "
+				capabilities. Just like h:button, button does GET requests targeting bookmarkable URLs."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="CommandLink"
+				id="commandButtonCommandLink"
+				action="ui/button/commandLink?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipCommandLink"
+				for="commandButtonCommandLink"
+				value="CommandLink extends the standard h:commandLink with ajax, partial processing and confirmation features."
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
