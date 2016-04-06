@@ -1,4 +1,4 @@
-package io.github.antalpeti.primefaces.showcase.data;
+package io.github.antalpeti.primefaces.showcase.service;
 
 import io.github.antalpeti.primefaces.showcase.domain.Car;
 
@@ -10,7 +10,7 @@ import java.util.UUID;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
-@ManagedBean(name = "dataCarService")
+@ManagedBean(name = "serviceCarService")
 @ApplicationScoped
 public class CarService {
 

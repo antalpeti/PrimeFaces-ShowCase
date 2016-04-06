@@ -1,6 +1,7 @@
 package io.github.antalpeti.primefaces.showcase.data;
 
 import io.github.antalpeti.primefaces.showcase.domain.Car;
+import io.github.antalpeti.primefaces.showcase.service.CarService;
 
 import java.io.Serializable;
 import java.util.List;
@@ -20,7 +21,7 @@ public class CarouselView implements Serializable {
 
   private Car selectedCar;
 
-  @ManagedProperty("#{dataCarService}")
+  @ManagedProperty("#{serviceCarService}")
   private CarService service;
 
   @PostConstruct
