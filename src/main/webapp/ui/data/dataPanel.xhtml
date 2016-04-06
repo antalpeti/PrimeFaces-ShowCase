@@ -1,0 +1,27 @@
+<ui:composition
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	<p:panel
+		header="Data"
+		toggleable="true"
+		toggleSpeed="500">
+		<h:form id="formData">
+			<p:commandButton
+				value="Carousel"
+				id="commandButtonCarousel"
+				action="ui/data/carousel?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipCarousel"
+				for="commandButtonCarousel"
+				value="Carousel displays data using a slide effect. Since v5.2.8, responsive mode, 
+				swipe support for touch enabled devices and various customization options are available. "
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+		</h:form>
+	</p:panel>
+</ui:composition>
