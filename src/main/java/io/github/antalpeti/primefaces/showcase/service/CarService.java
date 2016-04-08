@@ -2,6 +2,7 @@ package io.github.antalpeti.primefaces.showcase.service;
 
 import io.github.antalpeti.primefaces.showcase.domain.Car;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -12,7 +13,9 @@ import javax.faces.bean.ManagedBean;
 
 @ManagedBean(name = "serviceCarService")
 @ApplicationScoped
-public class CarService {
+public class CarService implements Serializable {
+
+  private static final long serialVersionUID = 1L;
 
   private final static String[] colors;
 

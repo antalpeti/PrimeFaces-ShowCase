@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+	<title>DataList</title>
+</h:head>
+
+<h:body>
+	<h:form id="form">
+		<p:dataList
+			value="#{dataDataListView.cars1}"
+			var="car"
+			type="ordered">
+			<f:facet name="header">
+				<h:outputText value="Basic" />
+			</f:facet>
+			<h:outputText value="#{car.brand}, #{car.year}" />
+		</p:dataList>
+
+		<p:dataList
+			value="#{dataDataListView.cars2}"
+			var="car"
+			type="definition">
+			<f:facet name="header">
+				<h:outputText value="Definition" />
+			</f:facet>
+			<h:outputText value="Brand: #{car.brand}, Year: #{car.year}" />
+
+			<f:facet name="description">
+				<p:graphicImage name="demo/images/car/#{car.brand}.gif" />
+			</f:facet>
+		</p:dataList>
+
+		<p:dataList
+			value="#{dataDataListView.cars3}"
+			var="car"
+			type="unordered"
+			itemType="none"
+			paginator="true"
+			rows="10"
+			styleClass="paginated">
+			<f:facet name="header">
+				<h:outputText value="Paginator" />
+			</f:facet>
+			<p:commandLink
+				update=":form:carDetail"
+				oncomplete="PF('carDialog').show()"
+				title="View Detail"
+				styleClass="ui-icon ui-icon-search"
+				style="float:left;margin-right:10px">
+				<f:setPropertyActionListener
+					value="#{car}"
+					target="#{dataDataListView.selectedCar}" />
+				<h:outputText value="#{car.brand}, #{car.year}" />
+			</p:commandLink>
+			<h:outputText
+				value="#{car.brand}, #{car.year}"
+				style="display:inline-block" />
+		</p:dataList>
+
+		<p:dialog
+			header="Car Info"
+			widgetVar="carDialog"
+			modal="true"
+			showEffect="blind"
+			hideEffect="explode"
+			resizable="false">
+			<p:outputPanel
+				id="carDetail"
+				style="text-align:center;">
+				<p:panelGrid
+					columns="2"
+					rendered="#{not empty dataDataListView.selectedCar}"
+					columnClasses="label,value">
+					<f:facet name="header">
+						<p:graphicImage name="demo/images/car/#{dataDataListView.selectedCar.brand}-big.gif" />
+					</f:facet>
+
+					<h:outputText value="Id:" />
+					<h:outputText value="#{dataDataListView.selectedCar.id}" />
+
+					<h:outputText value="Year" />
+					<h:outputText value="#{dataDataListView.selectedCar.year}" />
+
+					<h:outputText value="Color:" />
+					<h:outputText
+						value="#{dataDataListView.selectedCar.color}"
+						style="color:#{dataDataListView.selectedCar.color}" />
+
+					<h:outputText value="Price" />
+					<h:outputText value="$#{dataDataListView.selectedCar.price}" />
+				</p:panelGrid>
+			</p:outputPanel>
+		</p:dialog>
+	</h:form>
+</h:body>
+
+</html>
