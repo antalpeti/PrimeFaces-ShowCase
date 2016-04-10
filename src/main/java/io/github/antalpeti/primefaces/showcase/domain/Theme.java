@@ -1,4 +1,4 @@
-package io.github.antalpeti.primefaces.showcase.input.beans;
+package io.github.antalpeti.primefaces.showcase.domain;
 
 public class Theme {
 

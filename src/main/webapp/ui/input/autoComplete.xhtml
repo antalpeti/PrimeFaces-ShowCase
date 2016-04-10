@@ -107,7 +107,7 @@
 				var="theme"
 				itemLabel="#{theme.displayName}"
 				itemValue="#{theme}"
-				converter="inputThemeConverter"
+				converter="converterThemeConverter"
 				forceSelection="true" />
 
 			<p:outputLabel
@@ -120,7 +120,7 @@
 				var="theme"
 				itemLabel="#{theme.displayName}"
 				itemValue="#{theme}"
-				converter="inputThemeConverter"
+				converter="converterThemeConverter"
 				forceSelection="true">
 				<p:column>
 					<h:outputText styleClass=".ui-theme .ui-theme-#{theme.name}" />
@@ -142,7 +142,7 @@
 				var="theme"
 				itemLabel="#{theme.displayName}"
 				itemValue="#{theme}"
-				converter="inputThemeConverter"
+				converter="converterThemeConverter"
 				forceSelection="true">
 				<p:column style="width:10%">
 					<h:outputText styleClass="ui-theme ui-theme-#{theme.name}" />
@@ -163,7 +163,7 @@
 				var="theme"
 				itemLabel="#{theme.displayName}"
 				itemValue="#{theme}"
-				converter="inputThemeConverter"
+				converter="converterThemeConverter"
 				forceSelection="true">
 				<f:facet name="itemtip">
 					<h:panelGrid
@@ -194,7 +194,7 @@
 				var="theme"
 				itemLabel="#{theme.displayName}"
 				itemValue="#{theme}"
-				converter="inputThemeConverter"
+				converter="converterThemeConverter"
 				groupBy="#{inputAutoCompleteView.getThemeGroup(theme)}"
 				scrollHeight="250" />
 		</h:panelGrid>

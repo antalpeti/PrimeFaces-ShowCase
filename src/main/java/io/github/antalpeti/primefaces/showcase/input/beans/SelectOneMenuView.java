@@ -1,5 +1,8 @@
 package io.github.antalpeti.primefaces.showcase.input.beans;
 
+import io.github.antalpeti.primefaces.showcase.domain.Theme;
+import io.github.antalpeti.primefaces.showcase.service.ThemeService;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,7 +28,7 @@ public class SelectOneMenuView {
   private Theme theme;
   private List<Theme> themes;
 
-  @ManagedProperty("#{inputThemeService}")
+  @ManagedProperty("#{serviceThemeService}")
   private ThemeService service;
 
   @PostConstruct
