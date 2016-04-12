@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+	<title>Ring</title>
+</h:head>
+
+<h:body>
+	<h:form id="form">
+		<h3 style="margin-top: 0">Basic Ring</h3>
+		<p:ring
+			id="basic"
+			value="#{dataRingView.cars}"
+			var="car">
+			<p:outputPanel
+				style="text-align: center;"
+				layout="block">
+            #{car.brand}
+            <br />
+				<p:commandButton
+					update=":form:carDetail"
+					icon="ui-icon-search"
+					title="View"
+					oncomplete="PF('carDialog').show();">
+					<f:setPropertyActionListener
+						value="#{car}"
+						target="#{dataRingView.selectedCar}" />
+				</p:commandButton>
+			</p:outputPanel>
+		</p:ring>
+
+		<h3>Images with Custom Easing</h3>
+		<p:ring
+			id="custom"
+			value="#{dataRingView.cars}"
+			var="car"
+			styleClass="image-ring"
+			easing="easeInOutBack">
+			<p:graphicImage
+				id="img"
+				name="/demo/images/car/#{car.brand}-big.gif" />
+		</p:ring>
+
+		<p:dialog
+			header="Car Info"
+			widgetVar="carDialog"
+			modal="true"
+			showEffect="fade"
+			hideEffect="fade"
+			resizable="false"
+			width="170">
+			<p:outputPanel
+				id="carDetail"
+				style="text-align:center;"
+				layout="block">
+				<p:panelGrid
+					columns="2"
+					rendered="#{not empty dataRingView.selectedCar}"
+					columnClasses="value">
+					<f:facet name="header">
+						<p:graphicImage name="demo/images/car/#{dataRingView.selectedCar.brand}-big.gif" />
+					</f:facet>
+
+					<h:outputText value="Id:" />
+					<h:outputText value="#{dataRingView.selectedCar.id}" />
+
+					<h:outputText value="Year" />
+					<h:outputText value="#{dataRingView.selectedCar.year}" />
+
+					<h:outputText value="Brand: " />
+					<h:outputText value="#{dataRingView.selectedCar.brand}" />
+
+					<h:outputText value="Color:" />
+					<h:outputText
+						value="#{dataRingView.selectedCar.color}"
+						style="color:#{dataRingView.selectedCar.color}" />
+				</p:panelGrid>
+			</p:outputPanel>
+		</p:dialog>
+	</h:form>
+</h:body>
+
+</html>
