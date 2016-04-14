@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+	<title>Timeline</title>
+</h:head>
+
+<h:body>
+	<p:growl
+		id="growl"
+		showSummary="true"
+		showDetail="true"
+		autoUpdate="true" />
+
+	<pe:timeline
+		id="timeline"
+		value="#{dataBasicTimelineView.model}"
+		height="250px"
+		selectable="#{dataBasicTimelineView.selectable}"
+		zoomable="#{dataBasicTimelineView.zoomable}"
+		moveable="#{dataBasicTimelineView.moveable}"
+		stackEvents="#{dataBasicTimelineView.stackEvents}"
+		axisOnTop="#{dataBasicTimelineView.axisOnTop}"
+		eventStyle="#{dataBasicTimelineView.eventStyle}"
+		showCurrentTime="#{dataBasicTimelineView.showCurrentTime}"
+		showNavigation="#{dataBasicTimelineView.showNavigation}">
+
+		<p:ajax
+			event="select"
+			listener="#{dataBasicTimelineView.onSelect}" />
+
+	</pe:timeline>
+</h:body>
+
+</html>
