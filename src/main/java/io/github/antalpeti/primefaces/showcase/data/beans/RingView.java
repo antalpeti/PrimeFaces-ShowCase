@@ -1,4 +1,4 @@
-package io.github.antalpeti.primefaces.showcase.data;
+package io.github.antalpeti.primefaces.showcase.data.beans;
 
 import io.github.antalpeti.primefaces.showcase.domain.Car;
 

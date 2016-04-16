@@ -1,4 +1,4 @@
-package io.github.antalpeti.primefaces.showcase.data;
+package io.github.antalpeti.primefaces.showcase.data.beans;
 
 import io.github.antalpeti.primefaces.showcase.domain.Car;
 import io.github.antalpeti.primefaces.showcase.service.CarService;
@@ -11,20 +11,22 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 
-@ManagedBean(name = "dataDataScrollerView")
+@ManagedBean(name = "dataCarouselView")
 @ViewScoped
-public class DataScrollerView implements Serializable {
+public class CarouselView implements Serializable {
 
   private static final long serialVersionUID = 1L;
 
   private List<Car> cars;
+
+  private Car selectedCar;
 
   @ManagedProperty("#{serviceCarService}")
   private CarService service;
 
   @PostConstruct
   public void init() {
-    cars = service.createCars(100);
+    cars = service.createCars(9);
   }
 
   public List<Car> getCars() {
@@ -33,5 +35,13 @@ public class DataScrollerView implements Serializable {
 
   public void setService(CarService service) {
     this.service = service;
+  }
+
+  public Car getSelectedCar() {
+    return selectedCar;
+  }
+
+  public void setSelectedCar(Car selectedCar) {
+    this.selectedCar = selectedCar;
   }
 }

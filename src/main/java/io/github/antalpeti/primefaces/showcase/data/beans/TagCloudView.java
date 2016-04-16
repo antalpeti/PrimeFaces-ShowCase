@@ -1,4 +1,4 @@
-package io.github.antalpeti.primefaces.showcase.data;
+package io.github.antalpeti.primefaces.showcase.data.beans;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
