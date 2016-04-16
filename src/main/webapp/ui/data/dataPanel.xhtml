@@ -139,9 +139,21 @@
 				styleClass="ui-priority-primary" />
 			<p:tooltip
 				id="tooltipDataGrid"
-				for="commandButtonDataGrid "
+				for="commandButtonDataGrid"
 				value="DataGrid displays data in a grid layout. Responsive mode 
 				is provided to optimize the display for different screen sizes."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="DataScroller"
+				id="commandButtonDataScroller"
+				action="ui/data/datascroller/basic?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipDataScroller"
+				for="commandButtonDataScroller"
+				value="DataScroller displays data with on demand loading using scroll."
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
