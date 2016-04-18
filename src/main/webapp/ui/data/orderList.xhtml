@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+	<title>OrderList</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:growl
+			id="msgs"
+			showDetail="true" />
+
+		<h3 style="margin-top: 0">Basic OrderList</h3>
+		<p:orderList
+			value="#{dataOrderListView.cities}"
+			var="city"
+			controlsLocation="none"
+			itemLabel="#{city}"
+			itemValue="#{city}" />
+		<p:commandButton
+			value="Submit"
+			update="displayCities"
+			oncomplete="PF('cityDialog').show()"
+			style="margin-top:5px" />
+
+		<h3>Pojo Support with Clip Effect, Captions, Custom Content, Reorder Controls, Events and Responsive</h3>
+		<p:orderList
+			value="#{dataOrderListView.themes}"
+			var="theme"
+			itemValue="#{theme}"
+			converter="converterThemeConverter"
+			controlsLocation="left"
+			responsive="true">
+			<p:ajax
+				event="select"
+				listener="#{dataOrderListView.onSelect}"
+				update="msgs" />
+			<p:ajax
+				event="unselect"
+				listener="#{dataOrderListView.onUnselect}"
+				update="msgs" />
+			<p:ajax
+				event="reorder"
+				listener="#{dataOrderListView.onReorder}"
+				update="msgs" />
+
+			<f:facet name="caption">Available</f:facet>
+
+			<p:column style="width:32px">
+				<h:outputText styleClass="ui-theme ui-theme-#{theme.name}" />
+			</p:column>
+
+			<p:column>
+				<h:outputText value="#{theme.displayName}" />
+			</p:column>
+		</p:orderList>
+		<p:commandButton
+			value="Submit"
+			update="displayThemes"
+			oncomplete="PF('themesDialog').show()"
+			style="margin-top:5px" />
+
+		<p:dialog
+			modal="true"
+			showEffect="fade"
+			hideEffect="fade"
+			widgetVar="cityDialog"
+			header="Cities"
+			width="200">
+			<p:dataList
+				id="displayCities"
+				value="#{dataOrderListView.cities}"
+				var="city">
+				<h:outputText value="#{city}" />
+			</p:dataList>
+		</p:dialog>
+
+		<p:dialog
+			modal="true"
+			showEffect="fade"
+			hideEffect="fade"
+			widgetVar="themesDialog"
+			header="Themes"
+			width="200"
+			id="dlgThemes">
+			<h:panelGrid
+				id="displayThemes"
+				columns="2">
+				<ui:repeat
+					value="#{dataOrderListView.themes}"
+					var="theme">
+					<h:outputText
+						value="#{theme.displayName}"
+						style="margin-right:5px" />
+				</ui:repeat>
+			</h:panelGrid>
+		</p:dialog>
+	</h:form>
+</h:body>
+
+</html>
