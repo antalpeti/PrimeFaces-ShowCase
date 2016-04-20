@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+	<title>Repeat - since v5.3.5</title>
+</h:head>
+
+<h:body>
+	<h:form id="form">
+	<h:outputText value="Waiting for the appropriate version primefaces version." />
+<!-- 		<p:repeat -->
+<!-- 			value="#{dataDataListView.cars1}" -->
+<!-- 			var="car"> -->
+<!-- 			<h:panelGrid -->
+<!-- 				columns="2" -->
+<!-- 				style="width:100%" -->
+<!-- 				columnClasses="logo,detail"> -->
+<!-- 				<p:commandLink -->
+<!-- 					update=":form:carDetail" -->
+<!-- 					oncomplete="PF('carDialog').show()"> -->
+<!-- 					<f:setPropertyActionListener -->
+<!-- 						value="#{car}" -->
+<!-- 						target="#{dataDataListView.selectedCar}" /> -->
+<!-- 					<p:graphicImage name="demo/images/car/#{car.brand}-big.gif" /> -->
+<!-- 				</p:commandLink> -->
+
+<!-- 				<p:outputPanel> -->
+<!-- 					<h:panelGrid -->
+<!-- 						columns="2" -->
+<!-- 						cellpadding="5"> -->
+<!-- 						<h:outputText value="Id:" /> -->
+<!-- 						<h:outputText -->
+<!-- 							value="#{car.id}" -->
+<!-- 							style="font-weight: bold" /> -->
+
+<!-- 						<h:outputText value="Year:" /> -->
+<!-- 						<h:outputText -->
+<!-- 							value="#{car.year}" -->
+<!-- 							style="font-weight: bold" /> -->
+
+<!-- 						<h:outputText value="Color:" /> -->
+<!-- 						<h:outputText -->
+<!-- 							value="#{car.color}" -->
+<!-- 							style="font-weight: bold" /> -->
+<!-- 					</h:panelGrid> -->
+<!-- 				</p:outputPanel> -->
+<!-- 			</h:panelGrid> -->
+<!-- 			<hr /> -->
+<!-- 		</p:repeat> -->
+
+		<p:dialog
+			header="Car Info"
+			widgetVar="carDialog"
+			modal="true"
+			showEffect="blind"
+			hideEffect="explode"
+			resizable="false">
+			<p:outputPanel
+				id="carDetail"
+				style="text-align:center;">
+				<p:panelGrid
+					columns="2"
+					rendered="#{not empty dataDataListView.selectedCar}"
+					columnClasses="label,value">
+					<f:facet name="header">
+						<p:graphicImage name="demo/images/car/#{dataDataListView.selectedCar.brand}-big.gif" />
+					</f:facet>
+
+					<h:outputText value="Id:" />
+					<h:outputText value="#{dataDataListView.selectedCar.id}" />
+
+					<h:outputText value="Year" />
+					<h:outputText value="#{dataDataListView.selectedCar.year}" />
+
+					<h:outputText value="Color:" />
+					<h:outputText
+						value="#{dataDataListView.selectedCar.color}"
+						style="color:#{dataDataListView.selectedCar.color}" />
+
+					<h:outputText value="Price" />
+					<h:outputText value="$#{dataDataListView.selectedCar.price}" />
+				</p:panelGrid>
+			</p:outputPanel>
+		</p:dialog>
+	</h:form>
+</h:body>
+
+</html>
