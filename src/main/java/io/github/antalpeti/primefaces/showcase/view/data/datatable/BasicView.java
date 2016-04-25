@@ -11,7 +11,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 
-@ManagedBean(name = "dataDtBasicView")
+@ManagedBean(name = "datatableDtBasicView")
 @ViewScoped
 public class BasicView implements Serializable {
 
