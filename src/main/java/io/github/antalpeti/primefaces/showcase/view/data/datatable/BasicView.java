@@ -1,4 +1,4 @@
-package io.github.antalpeti.primefaces.showcase.view.data;
+package io.github.antalpeti.primefaces.showcase.view.data.datatable;
 
 import io.github.antalpeti.primefaces.showcase.domain.Car;
 import io.github.antalpeti.primefaces.showcase.service.CarService;
