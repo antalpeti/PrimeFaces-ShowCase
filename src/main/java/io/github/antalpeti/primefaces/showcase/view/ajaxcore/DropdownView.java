@@ -77,18 +77,18 @@ public class DropdownView implements Serializable {
     }
  
     public void onCountryChange() {
-        if(country !=null && !country.equals(""))
-            cities = data.get(country);
+        if(country == null || country.equals(""))
+        	cities = new HashMap<String, String>();
         else
-            cities = new HashMap<String, String>();
+        	cities = data.get(country);
     }
      
     public void displayLocation() {
         FacesMessage msg;
-        if(city != null && !city.isEmpty() && country != null)
-            msg = new FacesMessage("Selected", city + " of " + country);
+        if(city == null || city.isEmpty() || country == null)
+        	msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "City is not selected."); 
         else
-            msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid", "City is not selected."); 
+        	msg = new FacesMessage("Selected", city + " of " + country);
              
         FacesContext.getCurrentInstance().addMessage(null, msg);  
     }

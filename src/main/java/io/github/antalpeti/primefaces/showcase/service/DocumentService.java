@@ -17,14 +17,15 @@ public class DocumentService implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public TreeNode createDocuments() {
-    TreeNode root = new DefaultTreeNode(new Document("Files", "-", "Folder"), null);
+    String folder = "Folder";
+	TreeNode root = new DefaultTreeNode(new Document("Files", "-", folder), null);
 
-    TreeNode documents = new DefaultTreeNode(new Document("Documents", "-", "Folder"), root);
-    TreeNode pictures = new DefaultTreeNode(new Document("Pictures", "-", "Folder"), root);
-    TreeNode movies = new DefaultTreeNode(new Document("Movies", "-", "Folder"), root);
+    TreeNode documents = new DefaultTreeNode(new Document("Documents", "-", folder), root);
+    TreeNode pictures = new DefaultTreeNode(new Document("Pictures", "-", folder), root);
+    TreeNode movies = new DefaultTreeNode(new Document("Movies", "-", folder), root);
 
-    TreeNode work = new DefaultTreeNode(new Document("Work", "-", "Folder"), documents);
-    TreeNode primefaces = new DefaultTreeNode(new Document("PrimeFaces", "-", "Folder"), documents);
+    TreeNode work = new DefaultTreeNode(new Document("Work", "-", folder), documents);
+    TreeNode primefaces = new DefaultTreeNode(new Document("PrimeFaces", "-", folder), documents);
 
     // Documents
     TreeNode expenses =
@@ -47,18 +48,20 @@ public class DocumentService implements Serializable {
             pictures);
 
     // Movies
-    TreeNode pacino = new DefaultTreeNode(new Document("Al Pacino", "-", "Folder"), movies);
-    TreeNode deniro = new DefaultTreeNode(new Document("Robert De Niro", "-", "Folder"), movies);
+    TreeNode pacino = new DefaultTreeNode(new Document("Al Pacino", "-", folder), movies);
+    TreeNode deniro = new DefaultTreeNode(new Document("Robert De Niro", "-", folder), movies);
 
-    TreeNode scarface =
-        new DefaultTreeNode("mp3", new Document("Scarface", "15 GB", "Movie File"), pacino);
+    String movieFile = "Movie File";
+	String mp3 = "mp3";
+	TreeNode scarface =
+        new DefaultTreeNode(mp3, new Document("Scarface", "15 GB", movieFile), pacino);
     TreeNode carlitosWay =
-        new DefaultTreeNode("mp3", new Document("Carlitos' Way", "24 GB", "Movie File"), pacino);
+        new DefaultTreeNode(mp3, new Document("Carlitos' Way", "24 GB", movieFile), pacino);
 
     TreeNode goodfellas =
-        new DefaultTreeNode("mp3", new Document("Goodfellas", "23 GB", "Movie File"), deniro);
+        new DefaultTreeNode(mp3, new Document("Goodfellas", "23 GB", movieFile), deniro);
     TreeNode untouchables =
-        new DefaultTreeNode("mp3", new Document("Untouchables", "17 GB", "Movie File"), deniro);
+        new DefaultTreeNode(mp3, new Document("Untouchables", "17 GB", movieFile), deniro);
 
     return root;
   }
