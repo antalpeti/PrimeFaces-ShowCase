@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+    xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+    <title>DataTable - Scrollable</title>
+</h:head>
+
+<h:body>
+    <h:form>
+        <h3 style="margin-top: 0">Vertical</h3>
+        <p:dataTable
+            var="car"
+            value="#{datatableDtScrollView.cars1}"
+            scrollable="true"
+            scrollHeight="150">
+            <p:column
+                headerText="Id"
+                footerText="Id">
+                <h:outputText value="#{car.id}" />
+            </p:column>
+            <p:column
+                headerText="Year"
+                footerText="Year">
+                <h:outputText value="#{car.year}" />
+            </p:column>
+            <p:column
+                headerText="Brand"
+                footerText="Brand">
+                <h:outputText value="#{car.brand}" />
+            </p:column>
+            <p:column
+                headerText="Color"
+                footerText="Color">
+                <h:outputText value="#{car.color}" />
+            </p:column>
+        </p:dataTable>
+
+        <h3>Horizontal</h3>
+        <p:dataTable
+            var="car"
+            value="#{datatableDtScrollView.cars2}"
+            scrollable="true"
+            scrollWidth="400">
+            <p:column
+                headerText="Id"
+                footerText="Id">
+                <h:outputText value="#{car.id}" />
+            </p:column>
+            <p:column
+                headerText="Year"
+                footerText="Year">
+                <h:outputText value="#{car.year}" />
+            </p:column>
+            <p:column
+                headerText="Brand"
+                footerText="Brand">
+                <h:outputText value="#{car.brand}" />
+            </p:column>
+            <p:column
+                headerText="Color"
+                footerText="Color">
+                <h:outputText value="#{car.color}" />
+            </p:column>
+        </p:dataTable>
+
+        <h3>Horizontal and Vertical</h3>
+        <p:dataTable
+            var="car"
+            value="#{datatableDtScrollView.cars3}"
+            scrollable="true"
+            scrollWidth="50%"
+            scrollHeight="150">
+            <p:column
+                headerText="Id"
+                footerText="Id"
+                width="200">
+                <h:outputText value="#{car.id}" />
+            </p:column>
+            <p:column
+                headerText="Year"
+                footerText="Year"
+                width="200">
+                <h:outputText value="#{car.year}" />
+            </p:column>
+            <p:column
+                headerText="Brand"
+                footerText="Brand"
+                width="200">
+                <h:outputText value="#{car.brand}" />
+            </p:column>
+            <p:column
+                headerText="Color"
+                footerText="Color"
+                width="200">
+                <h:outputText value="#{car.color}" />
+            </p:column>
+            <p:column
+                headerText="Id"
+                footerText="Id"
+                width="200">
+                <h:outputText value="#{car.id}" />
+            </p:column>
+            <p:column
+                headerText="Year"
+                footerText="Year"
+                width="200">
+                <h:outputText value="#{car.year}" />
+            </p:column>
+            <p:column
+                headerText="Brand"
+                footerText="Brand"
+                width="200">
+                <h:outputText value="#{car.brand}" />
+            </p:column>
+            <p:column
+                headerText="Color"
+                footerText="Color"
+                width="200">
+                <h:outputText value="#{car.color}" />
+            </p:column>
+            <p:column
+                headerText="Id"
+                footerText="Id"
+                width="200">
+                <h:outputText value="#{car.id}" />
+            </p:column>
+            <p:column
+                headerText="Year"
+                footerText="Year"
+                width="200">
+                <h:outputText value="#{car.year}" />
+            </p:column>
+            <p:column
+                headerText="Brand"
+                footerText="Brand"
+                width="200">
+                <h:outputText value="#{car.brand}" />
+            </p:column>
+            <p:column
+                headerText="Color"
+                footerText="Color"
+                width="200">
+                <h:outputText value="#{car.color}" />
+            </p:column>
+            <p:column
+                headerText="Id"
+                footerText="Id"
+                width="200">
+                <h:outputText value="#{car.id}" />
+            </p:column>
+            <p:column
+                headerText="Year"
+                footerText="Year"
+                width="200">
+                <h:outputText value="#{car.year}" />
+            </p:column>
+            <p:column
+                headerText="Brand"
+                footerText="Brand"
+                width="200">
+                <h:outputText value="#{car.brand}" />
+            </p:column>
+            <p:column
+                headerText="Color"
+                footerText="Color"
+                width="200">
+                <h:outputText value="#{car.color}" />
+            </p:column>
+            <p:column
+                headerText="Id"
+                footerText="Id"
+                width="200">
+                <h:outputText value="#{car.id}" />
+            </p:column>
+            <p:column
+                headerText="Year"
+                footerText="Year"
+                width="200">
+                <h:outputText value="#{car.year}" />
+            </p:column>
+            <p:column
+                headerText="Brand"
+                footerText="Brand"
+                width="200">
+                <h:outputText value="#{car.brand}" />
+            </p:column>
+            <p:column
+                headerText="Color"
+                footerText="Color"
+                width="200">
+                <h:outputText value="#{car.color}" />
+            </p:column>
+        </p:dataTable>
+
+        <h3>Frozen Rows</h3>
+        <p:dataTable
+            var="car"
+            value="#{datatableDtScrollView.cars4}"
+            scrollable="true"
+            scrollHeight="150"
+            frozenRows="2">
+            <p:column
+                headerText="Id"
+                footerText="Id">
+                <h:outputText value="#{car.id}" />
+            </p:column>
+            <p:column
+                headerText="Year"
+                footerText="Year">
+                <h:outputText value="#{car.year}" />
+            </p:column>
+            <p:column
+                headerText="Brand"
+                footerText="Brand">
+                <h:outputText value="#{car.brand}" />
+            </p:column>
+            <p:column
+                headerText="Color"
+                footerText="Color">
+                <h:outputText value="#{car.color}" />
+            </p:column>
+        </p:dataTable>
+
+        <h3>Frozen Columns</h3>
+        <p:dataTable
+            var="car"
+            value="#{datatableDtScrollView.cars5}"
+            scrollable="true"
+            scrollHeight="150"
+            scrollWidth="300"
+            frozenColumns="1">
+            <p:column
+                headerText="Id"
+                footerText="Id">
+                <h:outputText value="#{car.id}" />
+            </p:column>
+            <p:column
+                headerText="Year"
+                footerText="Year">
+                <h:outputText value="#{car.year}" />
+            </p:column>
+            <p:column
+                headerText="Brand"
+                footerText="Brand">
+                <h:outputText value="#{car.brand}" />
+            </p:column>
+            <p:column
+                headerText="Color"
+                footerText="Color">
+                <h:outputText value="#{car.color}" />
+            </p:column>
+        </p:dataTable>
+
+        <h3>On-Demand Data</h3>
+        <p:dataTable
+            var="car"
+            value="#{datatableDtScrollView.cars6}"
+            scrollRows="20"
+            scrollable="true"
+            liveScroll="true"
+            scrollHeight="150"
+            style="margin-bottom:0">
+            <p:column
+                headerText="Id"
+                footerText="Id">
+                <h:outputText value="#{car.id}" />
+            </p:column>
+            <p:column
+                headerText="Year"
+                footerText="Year">
+                <h:outputText value="#{car.year}" />
+            </p:column>
+            <p:column
+                headerText="Brand"
+                footerText="Brand">
+                <h:outputText value="#{car.brand}" />
+            </p:column>
+            <p:column
+                headerText="Color"
+                footerText="Color">
+                <h:outputText value="#{car.color}" />
+            </p:column>
+        </p:dataTable>
+    </h:form>
+</h:body>
+
+</html>
