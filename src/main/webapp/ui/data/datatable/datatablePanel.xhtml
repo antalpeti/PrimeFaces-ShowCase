@@ -166,7 +166,8 @@
 			<p:tooltip
 				id="tooltipScroll"
 				for="commandButtonScroll"
-				value="Both vertical and horizontal scrolling of the data is supported with optional frozen rows-columns and on-demand loading features."
+				value="Both vertical and horizontal scrolling of the data is supported with optional
+                 frozen rows-columns and on-demand loading features."
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
@@ -178,7 +179,24 @@
 			<p:tooltip
 				id="tooltipRowColor"
 				for="commandButtonRowColor"
-				value="Certain rows can be styled based on a condition using rowStyleClass. Table below highlights cars that are manufactured before 1990."
+				value="Certain rows can be styled based on a condition using rowStyleClass. 
+                Table below highlights cars that are manufactured before 1990."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Lazy"
+				id="commandButtonLazy"
+				action="lazy?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipLazy"
+				for="commandButtonLazy"
+				value="DataTable has built-in support to deal with huge datasets. In order to enable 
+                lazy loading, a LazyDataModel needs to be implemented to query the datasource when 
+                pagination, sorting, filtering or live scrolling happens. This example uses an 
+                in-memory list to mimic a real datasource like a database. In a real application, 
+                loading should be executed with the query built using the information passed to the load method."
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
