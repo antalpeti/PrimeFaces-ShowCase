@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+    xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+    <title>DataTable - Reorder</title>
+</h:head>
+
+<h:body>
+    <h:form id="form">
+        <p:growl
+            id="msgs"
+            showDetail="true" />
+
+        <p:dataTable
+            var="car"
+            value="#{datatableDtReorderView.cars1}"
+            draggableColumns="true"
+            style="margin-bottom:20px">
+            <f:facet name="header">
+                <h:outputText value="Draggable Columns" />
+            </f:facet>
+            <p:column headerText="Id">
+                <h:outputText value="#{car.id}" />
+            </p:column>
+
+            <p:column headerText="Year">
+                <h:outputText value="#{car.year}" />
+            </p:column>
+
+            <p:column headerText="Brand">
+                <h:outputText value="#{car.brand}" />
+            </p:column>
+
+            <p:column headerText="Color">
+                <h:outputText value="#{car.color}" />
+            </p:column>
+        </p:dataTable>
+
+        <p:dataTable
+            var="car"
+            value="#{datatableDtReorderView.cars2}"
+            draggableRows="true">
+            <p:ajax
+                event="rowReorder"
+                listener="#{datatableDtReorderView.onRowReorder}"
+                update=":form:msgs" />
+            <f:facet name="header">
+                <h:outputText value="Draggable Rows" />
+            </f:facet>
+            <p:column headerText="Id">
+                <h:outputText value="#{car.id}" />
+            </p:column>
+
+            <p:column headerText="Year">
+                <h:outputText value="#{car.year}" />
+            </p:column>
+
+            <p:column headerText="Brand">
+                <h:outputText value="#{car.brand}" />
+            </p:column>
+
+            <p:column headerText="Color">
+                <h:outputText value="#{car.color}" />
+            </p:column>
+        </p:dataTable>
+    </h:form>
+</h:body>
+
+</html>
