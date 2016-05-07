@@ -232,7 +232,19 @@
 			<p:tooltip
 				id="tooltipColumnToggler"
 				for="commandButtonColumnToggler"
-				value=" ColumnToggler is a helper component of datatable to toggle the visibility of columns."
+				value="ColumnToggler is a helper component of datatable to toggle the visibility of columns."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="ContextMenu"
+				id="commandButtonContextMenu"
+				action="contextMenu?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipContextMenu"
+				for="commandButtonContextMenu"
+				value="ContextMenu has special integration with DataTable."
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
