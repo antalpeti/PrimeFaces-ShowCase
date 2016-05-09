@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+    xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+    <title>DataTable - Responsive</title>
+</h:head>
+
+<h:body>
+    <h3 style="margin-top: 0">Column Priority</h3>
+    <p:dataTable
+        var="car"
+        value="#{datatableDtBasicView.cars}">
+        <p:column headerText="Id">
+            <h:outputText value="#{car.id}" />
+        </p:column>
+
+        <p:column
+            headerText="Year (p3)"
+            priority="3">
+            <h:outputText value="#{car.year}" />
+        </p:column>
+
+        <p:column
+            headerText="Brand (p2)"
+            priority="2">
+            <h:outputText value="#{car.brand}" />
+        </p:column>
+
+        <p:column
+            headerText="Color (p4)"
+            priority="4">
+            <h:outputText value="#{car.color}" />
+        </p:column>
+    </p:dataTable>
+
+    <h3>Reflow</h3>
+    <p:dataTable
+        var="car"
+        value="#{datatableDtBasicView.cars}"
+        reflow="true"
+        rows="5"
+        paginator="true">
+        <p:column headerText="Id">
+            <h:outputText value="#{car.id}" />
+        </p:column>
+
+        <p:column headerText="Year">
+            <h:outputText value="#{car.year}" />
+        </p:column>
+
+        <p:column headerText="Brand">
+            <h:outputText value="#{car.brand}" />
+        </p:column>
+
+        <p:column headerText="Color">
+            <h:outputText value="#{car.color}" />
+        </p:column>
+    </p:dataTable>
+</h:body>
+
+</html>
