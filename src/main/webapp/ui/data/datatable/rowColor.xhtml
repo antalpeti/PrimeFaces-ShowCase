@@ -22,7 +22,7 @@
 <h:body>
     <p:dataTable
         var="car"
-        value="#{datatableDtBasicView.cars}"
+        value="#{datatableBasicView.cars}"
         rowStyleClass="#{car.year le 1990 ? 'old' : null}">
         <p:column headerText="Id">
             <h:outputText value="#{car.id}" />

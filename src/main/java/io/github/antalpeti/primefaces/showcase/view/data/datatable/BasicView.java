@@ -1,8 +1,5 @@
 package io.github.antalpeti.primefaces.showcase.view.data.datatable;
 
-import io.github.antalpeti.primefaces.showcase.domain.Car;
-import io.github.antalpeti.primefaces.showcase.service.CarService;
-
 import java.io.Serializable;
 import java.util.List;
 
@@ -11,7 +8,10 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 
-@ManagedBean(name = "datatableDtBasicView")
+import io.github.antalpeti.primefaces.showcase.domain.Car;
+import io.github.antalpeti.primefaces.showcase.service.CarService;
+
+@ManagedBean(name = "datatableBasicView")
 @ViewScoped
 public class BasicView implements Serializable {
 
