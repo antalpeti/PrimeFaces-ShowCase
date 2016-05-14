@@ -24,15 +24,15 @@
                 value="Delete"
                 update="cars"
                 icon="ui-icon-close"
-                actionListener="#{datatableDtContextMenuView.deleteCar}" />
+                actionListener="#{datatableContextMenuView.deleteCar}" />
         </p:contextMenu>
 
         <p:dataTable
             id="cars"
             var="car"
-            value="#{datatableDtContextMenuView.cars}"
+            value="#{datatableContextMenuView.cars}"
             rowKey="#{car.id}"
-            selection="#{datatableDtContextMenuView.selectedCar}"
+            selection="#{datatableContextMenuView.selectedCar}"
             selectionMode="single">
             <f:facet name="header">
                 <h:outputText value="RightClick to View Options" />
@@ -63,26 +63,26 @@
                 style="text-align:center;">
                 <p:panelGrid
                     columns="2"
-                    rendered="#{not empty datatableDtContextMenuView.selectedCar}"
+                    rendered="#{not empty datatableContextMenuView.selectedCar}"
                     columnClasses="label,value">
                     <f:facet name="header">
                         <p:graphicImage
-                            name="demo/images/car/#{datatableDtContextMenuView.selectedCar.brand}-big.gif" />
+                            name="demo/images/car/#{datatableContextMenuView.selectedCar.brand}-big.gif" />
                     </f:facet>
 
                     <h:outputText value="Id:" />
-                    <h:outputText value="#{datatableDtContextMenuView.selectedCar.id}" />
+                    <h:outputText value="#{datatableContextMenuView.selectedCar.id}" />
 
                     <h:outputText value="Year" />
-                    <h:outputText value="#{datatableDtContextMenuView.selectedCar.year}" />
+                    <h:outputText value="#{datatableContextMenuView.selectedCar.year}" />
 
                     <h:outputText value="Color:" />
                     <h:outputText
-                        value="#{datatableDtContextMenuView.selectedCar.color}"
-                        style="color:#{datatableDtContextMenuView.selectedCar.color}" />
+                        value="#{datatableContextMenuView.selectedCar.color}"
+                        style="color:#{datatableContextMenuView.selectedCar.color}" />
 
                     <h:outputText value="Price" />
-                    <h:outputText value="$#{datatableDtContextMenuView.selectedCar.price}" />
+                    <h:outputText value="$#{datatableContextMenuView.selectedCar.price}" />
                 </p:panelGrid>
             </p:outputPanel>
         </p:dialog>

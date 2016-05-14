@@ -11,7 +11,7 @@ import javax.faces.bean.ViewScoped;
 import io.github.antalpeti.primefaces.showcase.domain.Car;
 import io.github.antalpeti.primefaces.showcase.service.CarService;
 
-@ManagedBean(name = "datatableDtContextMenuView")
+@ManagedBean(name = "datatableContextMenuView")
 @ViewScoped
 public class ContextMenuView implements Serializable {
 
