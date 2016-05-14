@@ -23,11 +23,11 @@
 				style="font-weight:bold" />
 			<p:inputText
 				id="template"
-				value="#{datatableDtColumnsView.columnTemplate}"
+				value="#{datatableColumnsView.columnTemplate}"
 				size="50" />
 			<p:commandButton
 				update="cars"
-				actionListener="#{datatableDtColumnsView.updateColumns}"
+				actionListener="#{datatableColumnsView.updateColumns}"
 				value="Update"
 				process="@parent"
 				icon="ui-icon-refresh"
@@ -37,11 +37,11 @@
 		<p:dataTable
 			id="cars"
 			var="car"
-			value="#{datatableDtColumnsView.cars}"
+			value="#{datatableColumnsView.cars}"
 			widgetVar="carsTable"
-			filteredValue="#{datatableDtColumnsView.filteredCars}">
+			filteredValue="#{datatableColumnsView.filteredCars}">
 			<p:columns
-				value="#{datatableDtColumnsView.columns}"
+				value="#{datatableColumnsView.columns}"
 				var="column"
 				columnIndexVar="colIndex"
 				sortBy="#{car[column.property]}"
