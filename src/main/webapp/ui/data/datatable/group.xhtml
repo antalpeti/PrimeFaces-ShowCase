@@ -16,7 +16,7 @@
 	<h:form>
 		<p:dataTable
 			var="sale"
-			value="#{datatableDtGroupView.sales}">
+			value="#{datatableGroupView.sales}">
 			<f:facet name="header">
 				<h:outputText value="Sales/Profits of Manufacturers" />
 			</f:facet>
@@ -76,9 +76,9 @@
 						colspan="3"
 						style="text-align:right"
 						footerText="Totals:" />
-					<p:column footerText="$#{datatableDtGroupView.lastYearTotal}" />
+					<p:column footerText="$#{datatableGroupView.lastYearTotal}" />
 
-					<p:column footerText="$#{datatableDtGroupView.thisYearTotal}" />
+					<p:column footerText="$#{datatableGroupView.thisYearTotal}" />
 				</p:row>
 			</p:columnGroup>
 
@@ -89,7 +89,7 @@
 
 		<p:dataTable
 			var="player"
-			value="#{datatableDtGroupView.players}"
+			value="#{datatableGroupView.players}"
 			style="margin-top:40px">
 			<f:facet name="header">
 				<h:outputText value="Dynamic Columns" />
@@ -101,12 +101,12 @@
 						rowspan="2"
 						headerText="Player" />
 					<p:column
-						colspan="#{datatableDtGroupView.yearCount}"
+						colspan="#{datatableGroupView.yearCount}"
 						headerText="Goals" />
 				</p:row>
 				<p:row>
 					<ui:repeat
-						value="#{datatableDtGroupView.years}"
+						value="#{datatableGroupView.years}"
 						var="year">
 						<p:column headerText="#{year}" />
 					</ui:repeat>
@@ -118,7 +118,7 @@
 			</p:column>
 
 			<p:columns
-				value="#{datatableDtGroupView.years}"
+				value="#{datatableGroupView.years}"
 				var="year">
 				<h:outputText value="#{player.getGoals(year)}" />
 			</p:columns>

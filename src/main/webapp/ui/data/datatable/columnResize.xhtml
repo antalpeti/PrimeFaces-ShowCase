@@ -82,7 +82,7 @@
         <h3>Expand Mode with Grouping</h3>
         <p:dataTable
             var="sale"
-            value="#{datatableDtGroupView.sales}"
+            value="#{datatableGroupView.sales}"
             resizableColumns="true"
             resizeMode="expand">
             <f:facet name="header">
@@ -144,9 +144,9 @@
                         colspan="3"
                         style="text-align:right"
                         footerText="Totals:" />
-                    <p:column footerText="$#{datatableDtGroupView.lastYearTotal}" />
+                    <p:column footerText="$#{datatableGroupView.lastYearTotal}" />
 
-                    <p:column footerText="$#{datatableDtGroupView.thisYearTotal}" />
+                    <p:column footerText="$#{datatableGroupView.thisYearTotal}" />
                 </p:row>
             </p:columnGroup>
         </p:dataTable>
