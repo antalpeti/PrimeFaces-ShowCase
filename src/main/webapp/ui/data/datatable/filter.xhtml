@@ -16,10 +16,10 @@
 	<h:form>
 		<p:dataTable
 			var="car"
-			value="#{datatableDtFilterView.cars}"
+			value="#{datatableFilterView.cars}"
 			widgetVar="carsTable"
 			emptyMessage="No cars found with given criteria"
-			filteredValue="#{datatableDtFilterView.filteredCars}">
+			filteredValue="#{datatableFilterView.filteredCars}">
 
 			<f:facet name="header">
 				<p:outputPanel>
@@ -66,7 +66,7 @@
 							itemLabel="Select One"
 							itemValue="#{null}"
 							noSelectionOption="true" />
-						<f:selectItems value="#{datatableDtFilterView.brands}" />
+						<f:selectItems value="#{datatableFilterView.brands}" />
 					</p:selectOneMenu>
 				</f:facet>
 				<h:outputText value="#{car.brand}" />
@@ -83,7 +83,7 @@
 						onchange="PF('carsTable').filter()"
 						panelStyle="width:125px"
 						scrollHeight="150">
-						<f:selectItems value="#{datatableDtFilterView.colors}" />
+						<f:selectItems value="#{datatableFilterView.colors}" />
 					</p:selectCheckboxMenu>
 				</f:facet>
 				<h:outputText value="#{car.color}" />
@@ -115,7 +115,7 @@
 				filterBy="#{car.price}"
 				headerText="Price"
 				footerText="custom (min)"
-				filterFunction="#{datatableDtFilterView.filterByPrice}">
+				filterFunction="#{datatableFilterView.filterByPrice}">
 				<h:outputText value="#{car.price}">
 					<f:convertNumber
 						currencySymbol="$"
