@@ -21,7 +21,7 @@
 		<p:dataTable
 			id="cars1"
 			var="car"
-			value="#{datatableDtEditView.cars1}"
+			value="#{datatableEditView.cars1}"
 			editable="true"
 			style="margin-bottom:20px">
 			<f:facet name="header">
@@ -30,11 +30,11 @@
 
 			<p:ajax
 				event="rowEdit"
-				listener="#{datatableDtEditView.onRowEdit}"
+				listener="#{datatableEditView.onRowEdit}"
 				update=":form:msgs" />
 			<p:ajax
 				event="rowEditCancel"
-				listener="#{datatableDtEditView.onRowCancel}"
+				listener="#{datatableEditView.onRowCancel}"
 				update=":form:msgs" />
 
 			<p:column headerText="Id">
@@ -75,7 +75,7 @@
 							value="#{car.brand}"
 							style="width:100%">
 							<f:selectItems
-								value="#{datatableDtEditView.brands}"
+								value="#{datatableEditView.brands}"
 								var="man"
 								itemLabel="#{man}"
 								itemValue="#{man}" />
@@ -94,7 +94,7 @@
 							value="#{car.color}"
 							style="width:100%">
 							<f:selectItems
-								value="#{datatableDtEditView.colors}"
+								value="#{datatableEditView.colors}"
 								var="color"
 								itemLabel="#{color}"
 								itemValue="#{color}" />
@@ -124,7 +124,7 @@
 		<p:dataTable
 			id="cars2"
 			var="car"
-			value="#{datatableDtEditView.cars2}"
+			value="#{datatableEditView.cars2}"
 			editable="true"
 			editMode="cell"
 			widgetVar="cellCars">
@@ -134,7 +134,7 @@
 
 			<p:ajax
 				event="cellEdit"
-				listener="#{datatableDtEditView.onCellEdit}"
+				listener="#{datatableEditView.onCellEdit}"
 				update=":form:msgs" />
 
 			<p:column headerText="Id">
@@ -175,7 +175,7 @@
 							value="#{car.brand}"
 							style="width:100%">
 							<f:selectItems
-								value="#{datatableDtEditView.brands}"
+								value="#{datatableEditView.brands}"
 								var="man"
 								itemLabel="#{man}"
 								itemValue="#{man}" />
@@ -194,7 +194,7 @@
 							value="#{car.color}"
 							style="width:100%">
 							<f:selectItems
-								value="#{datatableDtEditView.colors}"
+								value="#{datatableEditView.colors}"
 								var="color"
 								itemLabel="#{color}"
 								itemValue="#{color}" />
