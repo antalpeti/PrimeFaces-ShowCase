@@ -15,7 +15,7 @@ import org.primefaces.model.LazyDataModel;
 import io.github.antalpeti.primefaces.showcase.domain.Car;
 import io.github.antalpeti.primefaces.showcase.service.CarService;
 
-@ManagedBean(name = "datatableDtLazyView")
+@ManagedBean(name = "datatableLazyView")
 @ViewScoped
 public class LazyView implements Serializable {
 
