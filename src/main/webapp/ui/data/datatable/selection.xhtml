@@ -21,7 +21,7 @@
 		<p:dataTable
 			id="basicDT"
 			var="car"
-			value="#{datatableDtSelectionView.cars1}">
+			value="#{datatableSelectionView.cars1}">
 			<f:facet name="header">
 				<h:outputText value="Basic" />
 			</f:facet>
@@ -45,7 +45,7 @@
 					title="View">
 					<f:setPropertyActionListener
 						value="#{car}"
-						target="#{datatableDtSelectionView.selectedCar}" />
+						target="#{datatableSelectionView.selectedCar}" />
 				</p:commandButton>
 			</p:column>
 		</p:dataTable>
@@ -53,9 +53,9 @@
 		<p:dataTable
 			id="singleDT"
 			var="car"
-			value="#{datatableDtSelectionView.cars2}"
+			value="#{datatableSelectionView.cars2}"
 			selectionMode="single"
-			selection="#{datatableDtSelectionView.selectedCar}"
+			selection="#{datatableSelectionView.selectedCar}"
 			rowKey="#{car.id}">
 			<f:facet name="header">
 				<h:outputText value="Single with Row Click" />
@@ -85,20 +85,20 @@
 		<p:dataTable
 			id="eventsDT"
 			var="car"
-			value="#{datatableDtSelectionView.cars3}"
+			value="#{datatableSelectionView.cars3}"
 			selectionMode="single"
-			selection="#{datatableDtSelectionView.selectedCar}"
+			selection="#{datatableSelectionView.selectedCar}"
 			rowKey="#{car.id}">
 			<f:facet name="header">
 				<h:outputText value="Select Events" />
 			</f:facet>
 			<p:ajax
 				event="rowSelect"
-				listener="#{datatableDtSelectionView.onRowSelect}"
+				listener="#{datatableSelectionView.onRowSelect}"
 				update=":form:msgs" />
 			<p:ajax
 				event="rowUnselect"
-				listener="#{datatableDtSelectionView.onRowUnselect}"
+				listener="#{datatableSelectionView.onRowUnselect}"
 				update=":form:msgs" />
 			<p:column headerText="Id">
 				<h:outputText value="#{car.id}" />
@@ -117,9 +117,9 @@
 		<p:dataTable
 			id="multipleDT"
 			var="car"
-			value="#{datatableDtSelectionView.cars4}"
+			value="#{datatableSelectionView.cars4}"
 			selectionMode="multiple"
-			selection="#{datatableDtSelectionView.selectedCars}"
+			selection="#{datatableSelectionView.selectedCars}"
 			rowKey="#{car.id}">
 			<f:facet name="header">
 				<h:outputText value="Multiple with Meta and Shift keys" />
@@ -149,8 +149,8 @@
 		<p:dataTable
 			id="radioDT"
 			var="car"
-			value="#{datatableDtSelectionView.cars5}"
-			selection="#{datatableDtSelectionView.selectedCar}"
+			value="#{datatableSelectionView.cars5}"
+			selection="#{datatableSelectionView.selectedCar}"
 			rowKey="#{car.id}">
 			<f:facet name="header">
 				<h:outputText value="RadioButton" />
@@ -183,8 +183,8 @@
 		<p:dataTable
 			id="checkboxDT"
 			var="car"
-			value="#{datatableDtSelectionView.cars6}"
-			selection="#{datatableDtSelectionView.selectedCars}"
+			value="#{datatableSelectionView.cars6}"
+			selection="#{datatableSelectionView.selectedCars}"
 			rowKey="#{car.id}"
 			style="margin-bottom:0">
 			<f:facet name="header">
@@ -227,25 +227,25 @@
 				style="text-align:center;">
 				<p:panelGrid
 					columns="2"
-					rendered="#{not empty datatableDtSelectionView.selectedCar}"
+					rendered="#{not empty datatableSelectionView.selectedCar}"
 					columnClasses="label,value">
 					<f:facet name="header">
-						<p:graphicImage name="demo/images/car/#{datatableDtSelectionView.selectedCar.brand}-big.gif" />
+						<p:graphicImage name="demo/images/car/#{datatableSelectionView.selectedCar.brand}-big.gif" />
 					</f:facet>
 
 					<h:outputText value="Id:" />
-					<h:outputText value="#{datatableDtSelectionView.selectedCar.id}" />
+					<h:outputText value="#{datatableSelectionView.selectedCar.id}" />
 
 					<h:outputText value="Year" />
-					<h:outputText value="#{datatableDtSelectionView.selectedCar.year}" />
+					<h:outputText value="#{datatableSelectionView.selectedCar.year}" />
 
 					<h:outputText value="Color:" />
 					<h:outputText
-						value="#{datatableDtSelectionView.selectedCar.color}"
-						style="color:#{datatableDtSelectionView.selectedCar.color}" />
+						value="#{datatableSelectionView.selectedCar.color}"
+						style="color:#{datatableSelectionView.selectedCar.color}" />
 
 					<h:outputText value="Price" />
-					<h:outputText value="$#{datatableDtSelectionView.selectedCar.price}" />
+					<h:outputText value="$#{datatableSelectionView.selectedCar.price}" />
 				</p:panelGrid>
 			</p:outputPanel>
 		</p:dialog>
@@ -262,7 +262,7 @@
 				id="multiCarDetail"
 				style="text-align:center;">
 				<ui:repeat
-					value="#{datatableDtSelectionView.selectedCars}"
+					value="#{datatableSelectionView.selectedCars}"
 					var="car">
 					<h:outputText
 						value="#{car.id} - #{car.brand}"
