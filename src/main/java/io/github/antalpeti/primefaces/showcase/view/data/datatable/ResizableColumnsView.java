@@ -14,7 +14,7 @@ import org.primefaces.event.ColumnResizeEvent;
 import io.github.antalpeti.primefaces.showcase.domain.Car;
 import io.github.antalpeti.primefaces.showcase.service.CarService;
 
-@ManagedBean(name = "datatableDtResizableColumnsView")
+@ManagedBean(name = "datatableResizableColumnsView")
 public class ResizableColumnsView implements Serializable {
 
   private static final long serialVersionUID = 1L;

@@ -22,7 +22,7 @@
         <p:dataTable
             id="cars1"
             var="car"
-            value="#{datatableDtResizableColumnsView.cars1}"
+            value="#{datatableResizableColumnsView.cars1}"
             resizableColumns="true"
             style="margin-bottom:20px">
             <f:facet name="header">
@@ -46,14 +46,14 @@
         <p:dataTable
             id="cars2"
             var="car"
-            value="#{datatableDtResizableColumnsView.cars2}"
+            value="#{datatableResizableColumnsView.cars2}"
             resizableColumns="true"
             liveResize="true"
             style="margin-bottom:20px">
             <p:ajax
                 event="colResize"
                 update=":form:msgs"
-                listener="#{datatableDtResizableColumnsView.onResize}" />
+                listener="#{datatableResizableColumnsView.onResize}" />
             <f:facet name="header">
 
             </f:facet>
