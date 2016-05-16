@@ -11,7 +11,7 @@ import org.primefaces.event.map.StateChangeEvent;
 import org.primefaces.model.map.LatLng;
 import org.primefaces.model.map.LatLngBounds;
 
-@ManagedBean(name = "gmapEventView")
+@ManagedBean(name = "gMapEventView")
 public class EventView implements Serializable {
 
   private static final long serialVersionUID = 1L;
