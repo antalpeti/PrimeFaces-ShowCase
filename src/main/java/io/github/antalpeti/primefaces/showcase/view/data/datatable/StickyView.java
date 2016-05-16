@@ -10,7 +10,7 @@ import javax.faces.bean.ManagedProperty;
 import io.github.antalpeti.primefaces.showcase.domain.Car;
 import io.github.antalpeti.primefaces.showcase.service.CarService;
 
-@ManagedBean(name = "datatableDtStickyView")
+@ManagedBean(name = "datatableStickyView")
 public class StickyView implements Serializable {
 
   private static final long serialVersionUID = 1L;
