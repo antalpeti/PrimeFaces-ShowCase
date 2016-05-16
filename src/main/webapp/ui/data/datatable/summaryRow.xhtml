@@ -16,7 +16,7 @@
 	<h:form>
 		<p:dataTable
 			var="car"
-			value="#{datatableDtSummaryRowView.cars}"
+			value="#{datatableSummaryRowView.cars}"
 			sortBy="#{car.brand}">
 			<p:column
 				headerText="Id"
@@ -45,7 +45,7 @@
 					<h:outputText value="Total:" />
 				</p:column>
 				<p:column>
-					<h:outputText value="#{datatableDtSummaryRowView.randomPrice}">
+					<h:outputText value="#{datatableSummaryRowView.randomPrice}">
 						<f:convertNumber
 							type="currency"
 							currencySymbol="$" />
