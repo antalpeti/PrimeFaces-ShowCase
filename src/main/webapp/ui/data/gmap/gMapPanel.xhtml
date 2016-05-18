@@ -76,6 +76,20 @@
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
+			<p:commandButton
+				value="Draggable"
+				id="commandButtonDraggable"
+				action="draggableMarkers?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipDraggable"
+				for="commandButtonDraggable"
+				value="When a draggable marker is dragged and dropped, a server side markerDragListener 
+                can be invoked passing a MarkerDragEvent that contains a reference to the dragged marker 
+                whose positon is updated already."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
 		</h:form>
 	</p:panel>
 </h:body>
