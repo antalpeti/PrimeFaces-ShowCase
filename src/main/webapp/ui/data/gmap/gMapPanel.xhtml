@@ -149,7 +149,21 @@
 			<p:tooltip
 				id="tooltipRectangles"
 				for="commandButtonRectangles"
-				value="Any number of rectangles can be displayed on map. Rectangles can also respond to selection by via overlaySelect behavior."
+				value="Any number of rectangles can be displayed on map. Rectangles can also respond 
+                to selection by via overlaySelect behavior."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="StreetView"
+				id="commandButtonStreetView"
+				action="street?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipStreetView"
+				for="commandButtonStreetView"
+				value="StreetView control is enabled by simply setting streetView to true. Drop the 
+                pegman marker to display Street View."
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
