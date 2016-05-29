@@ -22,7 +22,7 @@ public class FilterView implements Serializable {
 
   private List<Car> filteredCars;
 
-  @ManagedProperty("#{serviceCarService}")
+  @ManagedProperty("#{carService}")
   private CarService service;
 
   @PostConstruct

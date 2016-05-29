@@ -21,7 +21,7 @@ public class ContextMenuView implements Serializable {
 
   private Car selectedCar;
 
-  @ManagedProperty("#{serviceCarService}")
+  @ManagedProperty("#{carService}")
   private CarService service;
 
   @PostConstruct

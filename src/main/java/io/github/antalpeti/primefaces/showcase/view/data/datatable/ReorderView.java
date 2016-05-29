@@ -23,7 +23,7 @@ public class ReorderView implements Serializable {
 
   private List<Car> cars2;
 
-  @ManagedProperty("#{serviceCarService}")
+  @ManagedProperty("#{carService}")
   private CarService service;
 
   @PostConstruct

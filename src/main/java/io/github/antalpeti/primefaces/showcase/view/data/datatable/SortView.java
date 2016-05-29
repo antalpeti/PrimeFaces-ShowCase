@@ -21,7 +21,7 @@ public class SortView implements Serializable {
   private List<Car> cars2;
   private List<Car> cars3;
 
-  @ManagedProperty("#{serviceCarService}")
+  @ManagedProperty("#{carService}")
   private CarService service;
 
   @PostConstruct

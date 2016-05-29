@@ -17,7 +17,7 @@ public class StickyView implements Serializable {
 
   private List<Car> cars;
 
-  @ManagedProperty("#{serviceCarService}")
+  @ManagedProperty("#{carService}")
   private CarService service;
 
   @PostConstruct

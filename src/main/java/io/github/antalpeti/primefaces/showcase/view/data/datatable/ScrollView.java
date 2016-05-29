@@ -24,7 +24,7 @@ public class ScrollView implements Serializable {
   private List<Car> cars5;
   private List<Car> cars6;
 
-  @ManagedProperty("#{serviceCarService}")
+  @ManagedProperty("#{carService}")
   private CarService service;
 
   @PostConstruct

@@ -31,7 +31,7 @@ public class SelectionView implements Serializable {
   private Car selectedCar;
   private List<Car> selectedCars;
 
-  @ManagedProperty("#{serviceCarService}")
+  @ManagedProperty("#{carService}")
   private CarService service;
 
   @PostConstruct

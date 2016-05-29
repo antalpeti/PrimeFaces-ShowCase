@@ -1,7 +1,5 @@
 package io.github.antalpeti.primefaces.showcase.service;
 
-import io.github.antalpeti.primefaces.showcase.domain.Car;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,7 +9,9 @@ import java.util.UUID;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
-@ManagedBean(name = "serviceCarService")
+import io.github.antalpeti.primefaces.showcase.domain.Car;
+
+@ManagedBean(name = "carService")
 @ApplicationScoped
 public class CarService implements Serializable {
 

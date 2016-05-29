@@ -1,14 +1,14 @@
 package io.github.antalpeti.primefaces.showcase.view.data.dataexporter;
 
-import io.github.antalpeti.primefaces.showcase.domain.Car;
-import io.github.antalpeti.primefaces.showcase.service.CarService;
-
 import java.io.Serializable;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
+
+import io.github.antalpeti.primefaces.showcase.domain.Car;
+import io.github.antalpeti.primefaces.showcase.service.CarService;
 
 @ManagedBean(name = "dataexporterDataExporterView")
 public class DataExporterView implements Serializable {
@@ -17,7 +17,7 @@ public class DataExporterView implements Serializable {
 
   private List<Car> cars;
 
-  @ManagedProperty("#{serviceCarService}")
+  @ManagedProperty("#{carService}")
   private CarService service;
 
   @PostConstruct

@@ -1,8 +1,5 @@
 package io.github.antalpeti.primefaces.showcase.view.data;
 
-import io.github.antalpeti.primefaces.showcase.domain.Car;
-import io.github.antalpeti.primefaces.showcase.service.CarService;
-
 import java.io.Serializable;
 import java.util.List;
 
@@ -10,6 +7,9 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
+
+import io.github.antalpeti.primefaces.showcase.domain.Car;
+import io.github.antalpeti.primefaces.showcase.service.CarService;
 
 @ManagedBean(name = "dataDataListView")
 @ViewScoped
@@ -25,7 +25,7 @@ public class DataListView implements Serializable {
 
   private Car selectedCar;
 
-  @ManagedProperty("#{serviceCarService}")
+  @ManagedProperty("#{carService}")
   private CarService service;
 
   @PostConstruct
