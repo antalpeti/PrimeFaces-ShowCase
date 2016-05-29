@@ -1,8 +1,5 @@
 package io.github.antalpeti.primefaces.showcase.view.data;
 
-import io.github.antalpeti.primefaces.showcase.domain.Theme;
-import io.github.antalpeti.primefaces.showcase.service.ThemeService;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,10 +14,13 @@ import org.primefaces.event.TransferEvent;
 import org.primefaces.event.UnselectEvent;
 import org.primefaces.model.DualListModel;
 
+import io.github.antalpeti.primefaces.showcase.domain.Theme;
+import io.github.antalpeti.primefaces.showcase.service.ThemeService;
+
 @ManagedBean(name = "dataPickListView")
 public class PickListView {
 
-  @ManagedProperty("#{serviceThemeService}")
+  @ManagedProperty("#{themeService}")
   private ThemeService service;
 
   private DualListModel<String> cities;
@@ -90,14 +90,14 @@ public class PickListView {
 
   public void onSelect(SelectEvent event) {
     FacesContext context = FacesContext.getCurrentInstance();
-    context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Item Selected", event
-        .getObject().toString()));
+    context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Item Selected",
+        event.getObject().toString()));
   }
 
   public void onUnselect(UnselectEvent event) {
     FacesContext context = FacesContext.getCurrentInstance();
-    context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Item Unselected", event
-        .getObject().toString()));
+    context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Item Unselected",
+        event.getObject().toString()));
   }
 
   public void onReorder() {

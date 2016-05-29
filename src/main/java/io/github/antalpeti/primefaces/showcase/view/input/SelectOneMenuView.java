@@ -1,8 +1,5 @@
 package io.github.antalpeti.primefaces.showcase.view.input;
 
-import io.github.antalpeti.primefaces.showcase.domain.Theme;
-import io.github.antalpeti.primefaces.showcase.service.ThemeService;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,6 +10,9 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.model.SelectItem;
 import javax.faces.model.SelectItemGroup;
+
+import io.github.antalpeti.primefaces.showcase.domain.Theme;
+import io.github.antalpeti.primefaces.showcase.service.ThemeService;
 
 @ManagedBean(name = "inputSelectOneMenuView")
 public class SelectOneMenuView {
@@ -28,7 +28,7 @@ public class SelectOneMenuView {
   private Theme theme;
   private List<Theme> themes;
 
-  @ManagedProperty("#{serviceThemeService}")
+  @ManagedProperty("#{themeService}")
   private ThemeService service;
 
   @PostConstruct

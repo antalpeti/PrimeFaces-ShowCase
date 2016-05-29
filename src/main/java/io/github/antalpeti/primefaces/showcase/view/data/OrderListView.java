@@ -1,8 +1,5 @@
 package io.github.antalpeti.primefaces.showcase.view.data;
 
-import io.github.antalpeti.primefaces.showcase.domain.Theme;
-import io.github.antalpeti.primefaces.showcase.service.ThemeService;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,10 +12,13 @@ import javax.faces.context.FacesContext;
 import org.primefaces.event.SelectEvent;
 import org.primefaces.event.UnselectEvent;
 
+import io.github.antalpeti.primefaces.showcase.domain.Theme;
+import io.github.antalpeti.primefaces.showcase.service.ThemeService;
+
 @ManagedBean(name = "dataOrderListView")
 public class OrderListView {
 
-  @ManagedProperty("#{serviceThemeService}")
+  @ManagedProperty("#{themeService}")
   private ThemeService service;
 
   private List<String> cities;
@@ -66,14 +66,14 @@ public class OrderListView {
 
   public void onSelect(SelectEvent event) {
     FacesContext context = FacesContext.getCurrentInstance();
-    context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Item Selected", event
-        .getObject().toString()));
+    context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Item Selected",
+        event.getObject().toString()));
   }
 
   public void onUnselect(UnselectEvent event) {
     FacesContext context = FacesContext.getCurrentInstance();
-    context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Item Unselected", event
-        .getObject().toString()));
+    context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Item Unselected",
+        event.getObject().toString()));
   }
 
   public void onReorder() {

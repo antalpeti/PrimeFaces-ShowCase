@@ -1,7 +1,5 @@
 package io.github.antalpeti.primefaces.showcase.service;
 
-import io.github.antalpeti.primefaces.showcase.domain.Theme;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +7,9 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
-@ManagedBean(name = "serviceThemeService", eager = true)
+import io.github.antalpeti.primefaces.showcase.domain.Theme;
+
+@ManagedBean(name = "themeService", eager = true)
 @ApplicationScoped
 public class ThemeService {
 

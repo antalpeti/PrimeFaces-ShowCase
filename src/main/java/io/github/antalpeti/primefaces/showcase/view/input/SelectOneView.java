@@ -1,13 +1,13 @@
 package io.github.antalpeti.primefaces.showcase.view.input;
 
-import io.github.antalpeti.primefaces.showcase.domain.Theme;
-import io.github.antalpeti.primefaces.showcase.service.ThemeService;
-
 import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
+
+import io.github.antalpeti.primefaces.showcase.domain.Theme;
+import io.github.antalpeti.primefaces.showcase.service.ThemeService;
 
 @ManagedBean(name = "inputSelectOneView")
 public class SelectOneView {
@@ -16,7 +16,7 @@ public class SelectOneView {
   private Theme theme;
   private List<Theme> themes;
 
-  @ManagedProperty("#{serviceThemeService}")
+  @ManagedProperty("#{themeService}")
   private ThemeService service;
 
   @PostConstruct

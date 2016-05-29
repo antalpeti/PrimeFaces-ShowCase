@@ -1,8 +1,5 @@
 package io.github.antalpeti.primefaces.showcase.view.input;
 
-import io.github.antalpeti.primefaces.showcase.domain.Theme;
-import io.github.antalpeti.primefaces.showcase.service.ThemeService;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +9,9 @@ import javax.faces.bean.ManagedProperty;
 import javax.faces.context.FacesContext;
 
 import org.primefaces.event.SelectEvent;
+
+import io.github.antalpeti.primefaces.showcase.domain.Theme;
+import io.github.antalpeti.primefaces.showcase.service.ThemeService;
 
 @ManagedBean(name = "inputAutoCompleteView")
 public class AutoCompleteView {
@@ -30,7 +30,7 @@ public class AutoCompleteView {
   private Theme theme4;
   private List<Theme> selectedThemes;
 
-  @ManagedProperty("#{serviceThemeService}")
+  @ManagedProperty("#{themeService}")
   private ThemeService service;
 
   public List<String> completeText(String query) {
