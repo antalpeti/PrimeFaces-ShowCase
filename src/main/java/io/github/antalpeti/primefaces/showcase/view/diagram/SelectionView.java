@@ -26,7 +26,7 @@ public class SelectionView implements Serializable {
   private TreeNode[] selectedNodes1;
   private TreeNode[] selectedNodes2;
 
-  @ManagedProperty("#{serviceDocumentService}")
+  @ManagedProperty("#{documentService}")
   private DocumentService service;
 
   @PostConstruct

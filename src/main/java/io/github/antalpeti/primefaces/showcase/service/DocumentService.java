@@ -11,7 +11,7 @@ import org.primefaces.model.TreeNode;
 
 import io.github.antalpeti.primefaces.showcase.domain.Document;
 
-@ManagedBean(name = "serviceDocumentService")
+@ManagedBean(name = "documentService")
 @ApplicationScoped
 public class DocumentService implements Serializable {
 

@@ -1,8 +1,5 @@
 package io.github.antalpeti.primefaces.showcase.view.data.treetable;
 
-import io.github.antalpeti.primefaces.showcase.domain.Document;
-import io.github.antalpeti.primefaces.showcase.service.DocumentService;
-
 import java.io.Serializable;
 
 import javax.annotation.PostConstruct;
@@ -11,6 +8,9 @@ import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 
 import org.primefaces.model.TreeNode;
+
+import io.github.antalpeti.primefaces.showcase.domain.Document;
+import io.github.antalpeti.primefaces.showcase.service.DocumentService;
 
 @ManagedBean(name = "treetableBasicView")
 @ViewScoped
@@ -22,7 +22,7 @@ public class BasicView implements Serializable {
 
   private Document selectedDocument;
 
-  @ManagedProperty("#{serviceDocumentService}")
+  @ManagedProperty("#{documentService}")
   private DocumentService service;
 
   @PostConstruct
