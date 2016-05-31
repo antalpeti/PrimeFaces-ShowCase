@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+    xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+    <title>TreeTable - Events</title>
+</h:head>
+
+<h:body>
+    <h:form id="form">
+        <p:growl
+            id="messages"
+            showDetail="true" />
+
+        <p:treeTable
+            value="#{treetableEventsView.root}"
+            var="document"
+            selectionMode="single"
+            selection="#{treetableEventsView.selectedNode}">
+            <p:ajax
+                event="expand"
+                listener="#{treetableEventsView.onNodeExpand}"
+                update=":form:messages" />
+            <p:ajax
+                event="collapse"
+                listener="#{treetableEventsView.onNodeCollapse}"
+                update=":form:messages" />
+            <p:ajax
+                event="select"
+                listener="#{treetableEventsView.onNodeSelect}"
+                update=":form:messages" />
+            <p:ajax
+                event="unselect"
+                listener="#{treetableEventsView.onNodeUnselect}"
+                update=":form:messages" />
+
+            <f:facet name="header">
+                <h:outputText value="Document Viewer" />
+            </f:facet>
+            <p:column headerText="Name">
+                <h:outputText value="#{document.name}" />
+            </p:column>
+            <p:column headerText="Size">
+                <h:outputText value="#{document.size}" />
+            </p:column>
+            <p:column headerText="Type">
+                <h:outputText value="#{document.type}" />
+            </p:column>
+        </p:treeTable>
+    </h:form>
+</h:body>
+
+</html>
