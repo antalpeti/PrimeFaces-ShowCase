@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+    xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+    <title>TreeTable - ContextMenu</title>
+</h:head>
+
+<h:body>
+    <h:form id="form">
+        <p:contextMenu for="docs">
+            <p:menuitem
+                value="View"
+                update="documentPanel"
+                icon="ui-icon-search"
+                oncomplete="PF('documentDialog').show()" />
+            <p:menuitem
+                value="Delete"
+                actionListener="#{treetableContextMenuView.deleteNode}"
+                update="docs"
+                icon="ui-icon-close" />
+        </p:contextMenu>
+
+        <p:treeTable
+            id="docs"
+            value="#{treetableContextMenuView.root}"
+            var="document"
+            selectionMode="single"
+            selection="#{treetableContextMenuView.selectedNode}">
+            <f:facet name="header">
+                <h:outputText value="Document Viewer" />
+            </f:facet>
+            <p:column headerText="Name">
+                <h:outputText value="#{document.name}" />
+            </p:column>
+            <p:column headerText="Size">
+                <h:outputText value="#{document.size}" />
+            </p:column>
+            <p:column headerText="Type">
+                <h:outputText value="#{document.type}" />
+            </p:column>
+        </p:treeTable>
+
+        <p:dialog
+            id="dialog"
+            header="Document Detail"
+            showEffect="fade"
+            widgetVar="documentDialog"
+            modal="true"
+            resizable="false">
+            <p:outputPanel id="documentPanel">
+                <p:panelGrid
+                    columns="2"
+                    columnClasses="label,value"
+                    rendered="#{not empty treetableContextMenuView.selectedNode}">
+                    <h:outputLabel
+                        for="name"
+                        value="Name: " />
+                    <h:outputText
+                        id="name"
+                        value="#{treetableContextMenuView.selectedNode.data.name}"
+                        style="font-weight:bold" />
+
+                    <h:outputLabel
+                        for="size"
+                        value="Size: " />
+                    <h:outputText
+                        id="size"
+                        value="#{treetableContextMenuView.selectedNode.data.size}"
+                        style="font-weight:bold" />
+
+                    <h:outputLabel
+                        for="type"
+                        value="Type " />
+                    <h:outputText
+                        id="type"
+                        value="#{treetableContextMenuView.selectedNode.data.type}"
+                        style="font-weight:bold" />
+                </p:panelGrid>
+            </p:outputPanel>
+        </p:dialog>
+    </h:form>
+</h:body>
+
+</html>
