@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+    xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+    <title>TreeTable - Dynamic Columns</title>
+</h:head>
+
+<h:body>
+    <h:form id="form">
+        <h:panelGrid
+            columns="3"
+            style="margin:10px 0">
+            <p:outputLabel
+                for="template"
+                value="Template:"
+                style="font-weight:bold" />
+            <p:inputText
+                id="template"
+                value="#{treetableColumnsView.columnTemplate}"
+                size="50" />
+            <p:commandButton
+                update="treetable"
+                actionListener="#{treetableColumnsView.createDynamicColumns}"
+                value="Update"
+                process="@parent"
+                icon="ui-icon-refresh" />
+        </h:panelGrid>
+
+        <p:treeTable
+            id="treetable"
+            value="#{treetableColumnsView.root}"
+            var="document">
+            <f:facet name="header">
+                <h:outputText value="Document Viewer" />
+            </f:facet>
+            <p:columns
+                value="#{treetableColumnsView.columns}"
+                var="column"
+                headerText="#{column.header}">
+                <h:outputText value="#{document[column.property]}" />
+            </p:columns>
+        </p:treeTable>
+    </h:form>
+</h:body>
+
+</html>
