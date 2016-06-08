@@ -32,14 +32,14 @@
                 <h:outputText value="Row Editing" />
             </f:facet>
 
-<!--             <p:ajax -->
-<!--                 event="rowEdit" -->
-<!--                 listener="#{treetableEditView.onRowEdit}" -->
-<!--                 update=":form:msgs" /> -->
-<!--             <p:ajax -->
-<!--                 event="rowEditCancel" -->
-<!--                 listener="#{treetableEditView.onRowCancel}" -->
-<!--                 update=":form:msgs" /> -->
+            <p:ajax
+                event="rowEdit"
+                listener="#{treetableEditView.onRowEdit}"
+                update=":form:msgs" />
+            <p:ajax
+                event="rowEditCancel"
+                listener="#{treetableEditView.onRowCancel}"
+                update=":form:msgs" />
 
             <p:column headerText="Name">
                 <p:cellEditor>
@@ -91,10 +91,10 @@
                 <h:outputText value="Cell Editing" />
             </f:facet>
 
-<!--             <p:ajax -->
-<!--                 event="cellEdit" -->
-<!--                 listener="#{treetableEditView.onCellEdit}" -->
-<!--                 update=":form:msgs" /> -->
+            <p:ajax
+                event="cellEdit"
+                listener="#{treetableEditView.onCellEdit}"
+                update=":form:msgs" />
 
             <p:column headerText="Name">
                 <p:cellEditor>
