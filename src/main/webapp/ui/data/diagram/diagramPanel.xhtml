@@ -64,6 +64,22 @@
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
+			<p:commandButton
+				value="Editable"
+				id="commandButtonEditable"
+				action="editable?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipEditable"
+				for="commandButtonEditable"
+				value="Connections can be created and edited on the fly using drag and drop. 
+                In this example, computers are sources whereas servers are the targets. Once a 
+                connection is created, removed or changed using drag and drop, diagram makes an 
+                ajax request to save changes in the backend model. Additionally, 
+                optional ajax events are provided as callbacks."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
 		</h:form>
 	</p:panel>
 </h:body>
