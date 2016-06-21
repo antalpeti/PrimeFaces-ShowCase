@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Tree</title>
+</h:head>
+<h:body>
+	<p:panel
+		header="Tree"
+		toggleable="true"
+		toggleSpeed="500">
+		<h:form id="formDiagram">
+			<p:commandButton
+				value="Basic"
+				id="commandButtonBasic"
+				action="basic?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipBasic"
+				for="commandButtonBasic"
+				value="Tree has two modes, in client mode all nodes are available at client side whereas in ajax mode 
+				only expanded nodes are available."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+
+		</h:form>
+	</p:panel>
+</h:body>
+</html>
