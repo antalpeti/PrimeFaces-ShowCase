@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+	<title>DataExporter - Exclude Columns</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:dataTable
+			id="tbl"
+			var="car"
+			value="#{dataexporterDataExporterView.cars}"
+			paginator="true"
+			rows="10">
+			<p:column>
+				<f:facet name="header">
+					<h:outputText value="Id" />
+				</f:facet>
+				<h:outputText value="#{car.id}" />
+			</p:column>
+
+			<p:column exportable="false">
+				<f:facet name="header">
+					<h:outputText value="Year" />
+				</f:facet>
+				<h:outputText value="#{car.year}" />
+			</p:column>
+
+			<p:column>
+				<f:facet name="header">
+					<h:outputText value="Brand" />
+				</f:facet>
+				<h:outputText value="#{car.brand}" />
+			</p:column>
+
+			<p:column exportable="false">
+				<f:facet name="header">
+					<h:outputText value="Color" />
+				</f:facet>
+				<h:outputText value="#{car.color}" />
+			</p:column>
+		</p:dataTable>
+
+		<h:commandLink id="excel">
+			<p:graphicImage name="/demo/images/excel.png" />
+			<p:dataExporter
+				type="xls"
+				target="tbl"
+				fileName="cars" />
+		</h:commandLink>
+
+		<h:commandLink id="pdf">
+			<p:graphicImage name="/demo/images/pdf.png" />
+			<p:dataExporter
+				type="pdf"
+				target="tbl"
+				fileName="cars" />
+		</h:commandLink>
+
+		<h:commandLink id="csv">
+			<p:graphicImage name="/demo/images/csv.png" />
+			<p:dataExporter
+				type="csv"
+				target="tbl"
+				fileName="cars" />
+		</h:commandLink>
+
+		<h:commandLink id="xml">
+			<p:graphicImage name="/demo/images/xml.png" />
+			<p:dataExporter
+				type="xml"
+				target="tbl"
+				fileName="cars" />
+		</h:commandLink>
+	</h:form>
+</h:body>
+</html>
