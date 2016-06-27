@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+    xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+    <title>Tree - DragDrop</title>
+</h:head>
+
+<h:body>
+    <h:form id="form">
+        <p:growl
+            id="msgs"
+            showDetail="true" />
+
+        <h:panelGrid columns="3">
+            <p:tree
+                id="tree1"
+                value="#{treeDragDropView.root1}"
+                var="node"
+                selectionMode="single"
+                selection="#{treeDragDropView.selectedNode1}"
+                draggable="true"
+                droppable="true"
+                dragdropScope="demo">
+                <p:ajax
+                    event="dragdrop"
+                    listener="#{treeDragDropView.onDragDrop}"
+                    update=":form:msgs" />
+                <p:treeNode>
+                    <h:outputText value="#{node}" />
+                </p:treeNode>
+            </p:tree>
+
+            <p:graphicImage
+                alt="Transfer"
+                name="demo/images/transfer.png" />
+
+            <p:tree
+                id="tree2"
+                value="#{treeDragDropView.root2}"
+                var="node"
+                selectionMode="single"
+                selection="#{treeDragDropView.selectedNode2}"
+                draggable="true"
+                droppable="true"
+                dragdropScope="demo">
+                <p:ajax
+                    event="dragdrop"
+                    listener="#{treeDragDropView.onDragDrop}"
+                    update=":form:msgs" />
+                <p:treeNode>
+                    <h:outputText value="#{node}" />
+                </p:treeNode>
+            </p:tree>
+        </h:panelGrid>
+    </h:form>
+</h:body>
+</html>
