@@ -70,6 +70,22 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Wizard"
+                id="commandButtonWizard"
+                action="ui/panel/wizard?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipWizard"
+                for="commandButtonWizard"
+                value="Wizard creates a workflow by creating multiple steps out of a single page 
+                form. Only current step is processed partially and next step is displayed if 
+                current step passes validations. Wizard flow is sequential by default and this can 
+                be managed using the optional ajax flowListeners, simply outcome of a flowListener 
+                defines the next step to display. "
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
