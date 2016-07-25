@@ -33,6 +33,18 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Tooltip"
+                id="commandButtonTooltip"
+                action="ui/overlay/tooltip/tooltipPanel?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipTooltip"
+                for="commandButtonTooltip"
+                value=""
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
