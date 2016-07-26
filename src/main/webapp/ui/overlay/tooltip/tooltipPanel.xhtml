@@ -22,7 +22,22 @@
 			<p:tooltip
 				id="tooltipTooltipOptions"
 				for="commandButtonTooltipOptions"
-				value="Tooltip has various customization options such as effects, positioning, events and custom content support."
+				value="Tooltip has various customization options such as effects, positioning, 
+                events and custom content support."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Global Tooltip"
+				id="commandButtonGlobalTooltip"
+				action="tooltipGlobal?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipGlobalTooltip"
+				for="commandButtonGlobalTooltip"
+				value="Global tooltip binds to clickable elements with title attributes. Ajax 
+                updates are supported as well, meaning if target component is updated with ajax, 
+                tooltip can still bind."
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
