@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+    xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+    <title>Dialog - Minimize/Maximize</title>
+</h:head>
+
+<h:body>
+    <p:commandButton
+        value="Show Dialog"
+        onclick="PF('dlg').show();"
+        type="button" />
+
+    <p:dialog
+        header="Dialog"
+        widgetVar="dlg"
+        minimizable="true"
+        maximizable="true">
+        <h:outputText value="This Dialog can be Maximized and Minimized!" />
+    </p:dialog>
+</h:body>
+</html>
