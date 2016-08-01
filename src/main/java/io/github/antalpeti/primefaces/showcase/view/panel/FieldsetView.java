@@ -6,7 +6,7 @@ import javax.faces.context.FacesContext;
 
 import org.primefaces.event.ToggleEvent;
 
-@ManagedBean
+@ManagedBean(name = "fieldsetView")
 public class FieldsetView {
 
   public void handleToggle(ToggleEvent event) {

@@ -16,7 +16,7 @@ import org.primefaces.model.TreeNode;
 
 import io.github.antalpeti.primefaces.showcase.domain.Mail;
 
-@ManagedBean
+@ManagedBean(name = "mailboxView")
 @ViewScoped
 public class MailboxView implements Serializable {
 
