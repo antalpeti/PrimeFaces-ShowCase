@@ -57,6 +57,21 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="OverlayPanel"
+                id="commandButtonOverlayPanel"
+                action="ui/overlay/overlayPanel2?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipOverlayPanel"
+                for="commandButtonOverlayPanel"
+                value="OverlayPanel is a generic container component that can overlay other 
+                components on page. Notable features are custom positioning, configurable events 
+                and effects. Lazy content loading to reduce page load time is also supported 
+                via dynamic option, when enabled overlayPanel will load the contents just before being shown."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
