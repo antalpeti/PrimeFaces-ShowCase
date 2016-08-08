@@ -10,7 +10,7 @@ import javax.faces.convert.FacesConverter;
 import io.github.antalpeti.primefaces.showcase.domain.Theme;
 import io.github.antalpeti.primefaces.showcase.service.ThemeService;
 
-@FacesConverter("converterThemeConverter")
+@FacesConverter("themeConverter")
 public class ThemeConverter implements Converter {
 
   @Override
