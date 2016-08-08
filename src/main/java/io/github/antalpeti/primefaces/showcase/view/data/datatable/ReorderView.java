@@ -14,7 +14,7 @@ import org.primefaces.event.ReorderEvent;
 import io.github.antalpeti.primefaces.showcase.domain.Car;
 import io.github.antalpeti.primefaces.showcase.service.CarService;
 
-@ManagedBean(name = "datatableDtReorderView")
+@ManagedBean(name = "datatableReorderView")
 public class ReorderView implements Serializable {
 
   private static final long serialVersionUID = 1L;

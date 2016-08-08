@@ -20,7 +20,7 @@
 
         <p:dataTable
             var="car"
-            value="#{datatableDtReorderView.cars1}"
+            value="#{datatableReorderView.cars1}"
             draggableColumns="true"
             style="margin-bottom:20px">
             <f:facet name="header">
@@ -45,11 +45,11 @@
 
         <p:dataTable
             var="car"
-            value="#{datatableDtReorderView.cars2}"
+            value="#{datatableReorderView.cars2}"
             draggableRows="true">
             <p:ajax
                 event="rowReorder"
-                listener="#{datatableDtReorderView.onRowReorder}"
+                listener="#{datatableReorderView.onRowReorder}"
                 update=":form:msgs" />
             <f:facet name="header">
                 <h:outputText value="Draggable Rows" />
