@@ -12,7 +12,7 @@ import org.primefaces.model.map.LatLng;
 import org.primefaces.model.map.MapModel;
 import org.primefaces.model.map.Marker;
 
-@ManagedBean
+@ManagedBean(name = "gMapInfoWindowView")
 @ViewScoped
 public class InfoWindowView implements Serializable {
 

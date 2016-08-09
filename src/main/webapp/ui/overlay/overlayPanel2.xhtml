@@ -40,7 +40,7 @@
             style="width:600px">
             <p:dataTable
                 var="movies"
-                value="#{movieView.movieList}"
+                value="#{overlayMovieView.movieList}"
                 rows="5"
                 paginator="true">
                 <p:column headerText="Movie">
@@ -81,7 +81,7 @@
                 effect="fade"
                 style="width:300px;height:188px;">
                 <ui:repeat
-                    value="#{imageSwitchView.images}"
+                    value="#{overlayImageSwitchView.images}"
                     var="image">
                     <p:graphicImage
                         name="/demo/images/nature/#{image}"

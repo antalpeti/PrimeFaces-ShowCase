@@ -39,7 +39,7 @@
                     value="Username:" />
                 <p:inputText
                     id="username"
-                    value="#{userLoginView.username}"
+                    value="#{overlayUserLoginView.username}"
                     required="true"
                     label="username" />
 
@@ -48,7 +48,7 @@
                     value="Password:" />
                 <p:password
                     id="password"
-                    value="#{userLoginView.password}"
+                    value="#{overlayUserLoginView.password}"
                     required="true"
                     label="password" />
 
@@ -56,7 +56,7 @@
                     <p:commandButton
                         value="Login"
                         update="growl"
-                        actionListener="#{userLoginView.login}"
+                        actionListener="#{overlayUserLoginView.login}"
                         oncomplete="handleLoginRequest(xhr, status, args)" />
                 </f:facet>
             </h:panelGrid>

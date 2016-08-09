@@ -7,7 +7,7 @@ import javax.faces.context.FacesContext;
 import org.primefaces.event.CloseEvent;
 import org.primefaces.event.MoveEvent;
 
-@ManagedBean(name = "dialogView")
+@ManagedBean(name = "overlayDialogView")
 public class DialogView {
 
   public void destroyWorld() {

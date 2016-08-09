@@ -1,4 +1,4 @@
-package io.github.antalpeti.primefaces.showcase.view.diagram;
+package io.github.antalpeti.primefaces.showcase.view.data.treetable;
 
 import java.io.Serializable;
 

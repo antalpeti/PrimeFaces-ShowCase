@@ -8,7 +8,7 @@ import javax.faces.bean.ManagedBean;
 
 import io.github.antalpeti.primefaces.showcase.domain.Movie;
 
-@ManagedBean
+@ManagedBean(name = "overlayMovieView")
 public class MovieView {
 
   private List<Movie> movieList;

@@ -7,7 +7,7 @@ import javax.faces.event.ActionEvent;
 
 import org.primefaces.context.RequestContext;
 
-@ManagedBean(name = "userLoginView")
+@ManagedBean(name = "overlayUserLoginView")
 public class UserLoginView {
 
   private String username;

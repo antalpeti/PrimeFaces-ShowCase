@@ -6,7 +6,7 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 
-@ManagedBean
+@ManagedBean(name = "overlayImageSwitchView")
 public class ImageSwitchView {
 
   private List<String> images;

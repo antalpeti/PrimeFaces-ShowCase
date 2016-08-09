@@ -22,21 +22,21 @@
             center="36.890257,30.707417"
             zoom="13"
             type="HYBRID"
-            model="#{infoWindowView.advancedModel}"
+            model="#{gMapInfoWindowView.advancedModel}"
             style="width:100%;height:400px">
 
             <p:ajax
                 event="overlaySelect"
-                listener="#{infoWindowView.onMarkerSelect}" />
+                listener="#{gMapInfoWindowView.onMarkerSelect}" />
 
             <p:gmapInfoWindow id="infoWindow">
                 <p:outputPanel style="text-align: center; display: block; margin: auto">
 
                     <p:graphicImage
-                        name="/demo/images/antalya/#{infoWindowView.marker.data}"
+                        name="/demo/images/antalya/#{gMapInfoWindowView.marker.data}"
                         height="150" />
                     <br />
-                    <h:outputText value="#{infoWindowView.marker.title}" />
+                    <h:outputText value="#{gMapInfoWindowView.marker.title}" />
 
                 </p:outputPanel>
             </p:gmapInfoWindow>

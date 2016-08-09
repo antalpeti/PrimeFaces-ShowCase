@@ -11,7 +11,7 @@ import org.primefaces.model.TreeNode;
 
 import io.github.antalpeti.primefaces.showcase.service.DocumentService;
 
-@ManagedBean(name = "tabletreeScrollableView")
+@ManagedBean(name = "treetableScrollableView")
 @ViewScoped
 public class ScrollableView implements Serializable {
 
