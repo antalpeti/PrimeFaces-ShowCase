@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+    xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+    <title>Menu - MenuButton</title>
+</h:head>
+
+<h:body>
+    <h:form>
+        <p:growl
+            id="messages"
+            showDetail="true" />
+
+        <p:menuButton value="Options">
+            <p:menuitem
+                value="Save"
+                actionListener="#{menuMenuView.save}"
+                update="messages"
+                icon="ui-icon-disk" />
+            <p:menuitem
+                value="Update"
+                actionListener="#{menuMenuView.update}"
+                update="messages"
+                icon="ui-icon-arrowrefresh-1-w" />
+            <p:menuitem
+                value="Delete"
+                actionListener="#{menuMenuView.delete}"
+                ajax="false"
+                icon="ui-icon-close" />
+            <p:separator />
+            <p:menuitem
+                value="Homepage"
+                url="http://www.primefaces.org"
+                icon="ui-icon-extlink" />
+        </p:menuButton>
+    </h:form>
+</h:body>
+</html>
