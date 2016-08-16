@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>ContextMenu</title>
+</h:head>
+<h:body>
+	<p:panel
+		header="ContextMenu"
+		toggleable="true"
+		toggleSpeed="500">
+		<h:form id="formContextMenu">
+			<p:commandButton
+				value="Basic"
+				id="commandButtonBasic"
+				action="basic?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipBasic"
+				for="commandButtonBasic"
+				value="ContextMenu is an overlay menu display mainly displayed using right-click."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+		</h:form>
+	</p:panel>
+</h:body>
+</html>
