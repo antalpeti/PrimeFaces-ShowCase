@@ -34,7 +34,19 @@
 			<p:tooltip
 				id="tooltipTiered"
 				for="commandButtonTiered"
-				value="ContextMenu can have nested submenus and menuitems"
+				value="ContextMenu can have nested submenus and menuitems."
+				showEffect="clip"
+				hideEffect="explode"
+				trackMouse="true" />
+			<p:commandButton
+				value="Target"
+				id="commandButtonTarget"
+				action="target?faces-redirect=true"
+				styleClass="ui-priority-primary" />
+			<p:tooltip
+				id="tooltipTarget"
+				for="commandButtonTarget"
+				value="ContextMenu can be attached to any component, right-click on ImageSwitch component for options."
 				showEffect="clip"
 				hideEffect="explode"
 				trackMouse="true" />
