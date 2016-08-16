@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+	<title>ContextMenu - Tiered</title>
+</h:head>
+
+<h:body>
+	<h:outputText value="Right click to view the menu options." />
+	<h:form>
+
+		<p:growl
+			id="messages"
+			showDetail="true" />
+
+		<p:contextMenu style="width:180px">
+			<p:submenu
+				label="Ajax Menuitems"
+				icon="ui-icon-refresh">
+				<p:menuitem
+					value="Save"
+					actionListener="#{menuMenuView.save}"
+					update="messages"
+					icon="ui-icon-disk" />
+				<p:menuitem
+					value="Update"
+					actionListener="#{menuMenuView.update}"
+					update="messages"
+					icon="ui-icon-arrowrefresh-1-w" />
+			</p:submenu>
+			<p:submenu
+				label="Non-Ajax Menuitem"
+				icon="ui-icon-newwin">
+				<p:menuitem
+					value="Delete"
+					actionListener="#{menuMenuView.delete}"
+					update="messages"
+					ajax="false"
+					icon="ui-icon-close" />
+			</p:submenu>
+			<p:separator />
+			<p:submenu
+				label="Navigations"
+				icon="ui-icon-extlink">
+				<p:submenu label="Prime Links">
+					<p:menuitem
+						value="PrimeTek"
+						url="http://www.primetek.com.tr" />
+					<p:menuitem
+						value="PrimeFaces"
+						url="http://www.primefaces.org" />
+				</p:submenu>
+				<p:menuitem
+					value="Index"
+					outcome="/index"
+					icon="ui-icon-signal" />
+			</p:submenu>
+		</p:contextMenu>
+
+	</h:form>
+</h:body>
+</html>
