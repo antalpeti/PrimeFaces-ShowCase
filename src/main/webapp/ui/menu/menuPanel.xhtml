@@ -1,135 +1,147 @@
 <ui:composition
-	xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
-	<p:panel
-		header="Menu"
-		toggleable="true"
-		toggleSpeed="500">
-		<h:form id="formMenu">
-			<p:commandButton
-				value="Breadcrumb"
-				id="commandButtonBreadcrumb"
-				action="ui/menu/breadcrumb?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipBreadcrumb"
-				for="commandButtonBreadcrumb"
-				value="Breadcrumb provides contextual information about the page hierarchy."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Dock"
-				id="commandButtonDock"
-				action="ui/menu/dock?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipDock"
-				for="commandButtonDock"
-				value="Dock is a navigation component consisting of menuitems."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Menu"
-				id="commandButtonMenu"
-				action="ui/menu/menu?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipMenu"
-				for="commandButtonMenu"
-				value="Menu is a navigation component with one level of submenus."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="MenuButton"
-				id="commandButtonMenuButton"
-				action="ui/menu/menuButton?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipMenuButton"
-				for="commandButtonMenuButton"
-				value="MenuButton groups multiple items in a popup."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="SlideMenu"
-				id="commandButtonSlideMenu"
-				action="ui/menu/slideMenu?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipSlideMenu"
-				for="commandButtonSlideMenu"
-				value="SlideMenu displays nested submenus with a slide animation."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Steps"
-				id="commandButtonSteps"
-				action="ui/menu/steps?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipSteps"
-				for="commandButtonSteps"
-				value="Steps components is an indicator for the steps in a workflow. Layout of steps component is 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+    <p:panel
+        header="Menu"
+        toggleable="true"
+        toggleSpeed="500">
+        <h:form id="formMenu">
+            <p:commandButton
+                value="Breadcrumb"
+                id="commandButtonBreadcrumb"
+                action="ui/menu/breadcrumb?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipBreadcrumb"
+                for="commandButtonBreadcrumb"
+                value="Breadcrumb provides contextual information about the page hierarchy."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Dock"
+                id="commandButtonDock"
+                action="ui/menu/dock?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipDock"
+                for="commandButtonDock"
+                value="Dock is a navigation component consisting of menuitems."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Menu"
+                id="commandButtonMenu"
+                action="ui/menu/menu?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipMenu"
+                for="commandButtonMenu"
+                value="Menu is a navigation component with one level of submenus."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="MenuButton"
+                id="commandButtonMenuButton"
+                action="ui/menu/menuButton?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipMenuButton"
+                for="commandButtonMenuButton"
+                value="MenuButton groups multiple items in a popup."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="SlideMenu"
+                id="commandButtonSlideMenu"
+                action="ui/menu/slideMenu?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipSlideMenu"
+                for="commandButtonSlideMenu"
+                value="SlideMenu displays nested submenus with a slide animation."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Steps"
+                id="commandButtonSteps"
+                action="ui/menu/steps?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipSteps"
+                for="commandButtonSteps"
+                value="Steps components is an indicator for the steps in a workflow. Layout of steps component is 
                 optimized for responsive design."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="TieredMenu"
-				id="commandButtonTieredMenu"
-				action="ui/menu/tieredMenu?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipTieredMenu"
-				for="commandButtonTieredMenu"
-				value="TieredMenu displays submenus in nested overlays."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="ContextMenu"
-				id="commandButtonContextMenu"
-				action="ui/menu/contextmenu/contextMenuPanel?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipContextMenu"
-				for="commandButtonContextMenu"
-				value=""
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="MegaMenu"
-				id="commandButtonMegaMenu"
-				action="ui/menu/megaMenu?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipMegaMenu"
-				for="commandButtonMegaMenu"
-				value="MegaMenu displays submenus of root items together."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Menubar"
-				id="commandButtonMenubar"
-				action="ui/menu/menubar?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipMenubar"
-				for="commandButtonMenubar"
-				value="Menubar displays root items horizontally and nested items as tiered."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-		</h:form>
-	</p:panel>
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="TieredMenu"
+                id="commandButtonTieredMenu"
+                action="ui/menu/tieredMenu?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipTieredMenu"
+                for="commandButtonTieredMenu"
+                value="TieredMenu displays submenus in nested overlays."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="ContextMenu"
+                id="commandButtonContextMenu"
+                action="ui/menu/contextmenu/contextMenuPanel?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipContextMenu"
+                for="commandButtonContextMenu"
+                value=""
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="MegaMenu"
+                id="commandButtonMegaMenu"
+                action="ui/menu/megaMenu?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipMegaMenu"
+                for="commandButtonMegaMenu"
+                value="MegaMenu displays submenus of root items together."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Menubar"
+                id="commandButtonMenubar"
+                action="ui/menu/menubar?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipMenubar"
+                for="commandButtonMenubar"
+                value="Menubar displays root items horizontally and nested items as tiered."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="PanelMenu"
+                id="commandButtonPanelMenu"
+                action="ui/menu/panelMenu?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipPanelMenu"
+                for="commandButtonPanelMenu"
+                value="PanelMenu is a hybrid of accordion-tree components."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+        </h:form>
+    </p:panel>
 </ui:composition>
