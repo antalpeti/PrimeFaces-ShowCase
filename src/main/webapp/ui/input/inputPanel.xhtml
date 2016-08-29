@@ -1,371 +1,371 @@
 <ui:composition
-	xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
-	<p:panel
-		header="Input"
-		toggleable="true"
-		toggleSpeed="500">
-		<h:form id="formInput">
-			<p:commandButton
-				value="AutoComplete"
-				id="commandButtonAutoComplete"
-				action="ui/input/autoComplete?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipAutoComplete"
-				for="commandButtonAutoComplete"
-				value="AutoComplete displays suggestions while the input is being type. 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+    <p:panel
+        header="Input"
+        toggleable="true"
+        toggleSpeed="500">
+        <h:form id="formInput">
+            <p:commandButton
+                value="AutoComplete"
+                id="commandButtonAutoComplete"
+                action="ui/input/autoComplete?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipAutoComplete"
+                for="commandButtonAutoComplete"
+                value="AutoComplete displays suggestions while the input is being type. 
 					AutoComplete features various options, customizable content, multiple selection, effects and events."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="BooleanButton"
-				id="commandButtonBooleanButton"
-				action="ui/input/booleanButton?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipBooleanButton"
-				for="commandButtonBooleanButton"
-				value="SelectBooleanButton is used to select a boolean value using a button."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Calendar"
-				id="commandButtonCalendar"
-				action="ui/input/calendar?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipCalendar"
-				for="commandButtonCalendar"
-				value="Calendar is an input component to pick a datetime."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="OneMenu"
-				id="commandButtonOneMenu"
-				action="ui/input/oneMenu?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipOneMenu"
-				for="commandButtonOneMenu"
-				value="SelectOneMenu is used to choose a single item from a list."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="InputText"
-				id="commandButtonInputText"
-				action="ui/input/inputText?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipInputText"
-				for="commandButtonInputText"
-				value="InputText extends standard InputText with skinning capabilities."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="InputMask"
-				id="commandButtonInputMask"
-				action="ui/input/inputMask?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipInputMask"
-				for="commandButtonInputMask"
-				value="InputMask component forces input to be formatted in a certain pattern."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="ManyButton"
-				id="commandButtonManyButton"
-				action="ui/input/manyButton?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipManyButton"
-				for="commandButtonManyButton"
-				value=" SelectManyButton is used to choose multiple items from a list using buttons."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="ManyCheckbox"
-				id="commandButtonManyCheckbox"
-				action="ui/input/manyCheckbox?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipManyCheckbox"
-				for="commandButtonManyCheckbox"
-				value="SelectManyCheckbox is used to choose multiple items from a collection."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="OneButton"
-				id="commandButtonOneButton"
-				action="ui/input/oneButton?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipOneButton"
-				for="commandButtonOneButton"
-				value="SelectOneButton is used to choose a single item from a list using buttons."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Signature"
-				id="commandButtonSignature"
-				action="ui/input/signature?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipSignature"
-				for="commandButtonSignature"
-				value="Signature is used to draw a signature as an input. Various options such as 
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="BooleanButton"
+                id="commandButtonBooleanButton"
+                action="ui/input/booleanButton?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipBooleanButton"
+                for="commandButtonBooleanButton"
+                value="SelectBooleanButton is used to select a boolean value using a button."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Calendar"
+                id="commandButtonCalendar"
+                action="ui/input/calendar?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipCalendar"
+                for="commandButtonCalendar"
+                value="Calendar is an input component to pick a datetime."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="OneMenu"
+                id="commandButtonOneMenu"
+                action="ui/input/oneMenu?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipOneMenu"
+                for="commandButtonOneMenu"
+                value="SelectOneMenu is used to choose a single item from a list."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="InputText"
+                id="commandButtonInputText"
+                action="ui/input/inputText?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipInputText"
+                for="commandButtonInputText"
+                value="InputText extends standard InputText with skinning capabilities."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="InputMask"
+                id="commandButtonInputMask"
+                action="ui/input/inputMask?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipInputMask"
+                for="commandButtonInputMask"
+                value="InputMask component forces input to be formatted in a certain pattern."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="ManyButton"
+                id="commandButtonManyButton"
+                action="ui/input/manyButton?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipManyButton"
+                for="commandButtonManyButton"
+                value=" SelectManyButton is used to choose multiple items from a list using buttons."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="ManyCheckbox"
+                id="commandButtonManyCheckbox"
+                action="ui/input/manyCheckbox?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipManyCheckbox"
+                for="commandButtonManyCheckbox"
+                value="SelectManyCheckbox is used to choose multiple items from a collection."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="OneButton"
+                id="commandButtonOneButton"
+                action="ui/input/oneButton?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipOneButton"
+                for="commandButtonOneButton"
+                value="SelectOneButton is used to choose a single item from a list using buttons."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Signature"
+                id="commandButtonSignature"
+                action="ui/input/signature?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipSignature"
+                for="commandButtonSignature"
+                value="Signature is used to draw a signature as an input. Various options such as 
 				background color, foreground color, thickness are available for customization. 
 				Signature also supports touch enabled devices and legacy browsers without canvas support."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Slider"
-				id="commandButtonSlider"
-				action="ui/input/slider?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipSlider"
-				for="commandButtonSlider"
-				value="Slider is used to provide input in various ways."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Password"
-				id="commandButtonPassword"
-				action="ui/input/password?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipPassword"
-				for="commandButtonPassword"
-				value="Password component is an extended version of standard inputSecret 
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Slider"
+                id="commandButtonSlider"
+                action="ui/input/slider?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipSlider"
+                for="commandButtonSlider"
+                value="Slider is used to provide input in various ways."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Password"
+                id="commandButtonPassword"
+                action="ui/input/password?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipPassword"
+                for="commandButtonPassword"
+                value="Password component is an extended version of standard inputSecret 
 				component with theme integration, strength indicator and match mode."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Rating"
-				id="commandButtonRating"
-				action="ui/input/rating?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipRating"
-				for="commandButtonRating"
-				value="Rating component provides a star based rating input."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Inplace"
-				id="commandButtonInplace"
-				action="ui/input/inplace?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipInplace"
-				for="commandButtonInplace"
-				value="Inplace provides easy inplace editing and inline content display. For inplace 
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Rating"
+                id="commandButtonRating"
+                action="ui/input/rating?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipRating"
+                for="commandButtonRating"
+                value="Rating component provides a star based rating input."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Inplace"
+                id="commandButtonInplace"
+                action="ui/input/inplace?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipInplace"
+                for="commandButtonInplace"
+                value="Inplace provides easy inplace editing and inline content display. For inplace 
 				editing, 'save' and 'cancel' ajax behavior events are provided for customizing the use-case."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Knob"
-				id="commandButtonKnob"
-				action="ui/input/knob?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipKnob"
-				for="commandButtonKnob"
-				value="Knob's useful to insert numeric values in a range."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="InputTextarea"
-				id="commandButtonInputTextarea"
-				action="ui/input/inputTextarea?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipInputTextarea"
-				for="commandButtonInputTextarea"
-				value="InputTextarea extends standard InputTextarea with autoComplete, autoResize, 
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Knob"
+                id="commandButtonKnob"
+                action="ui/input/knob?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipKnob"
+                for="commandButtonKnob"
+                value="Knob's useful to insert numeric values in a range."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="InputTextarea"
+                id="commandButtonInputTextarea"
+                action="ui/input/inputTextarea?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipInputTextarea"
+                for="commandButtonInputTextarea"
+                value="InputTextarea extends standard InputTextarea with autoComplete, autoResize, 
 				remaining characters counter and theming features."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="BooleanCheckbox"
-				id="commandButtonBooleanCheckbox"
-				action="ui/input/booleanCheckbox?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipBooleanCheckbox"
-				for="commandButtonBooleanCheckbox"
-				value="SelectBooleanCheckbox is used to select a boolean value."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="CheckboxMenu"
-				id="commandButtonCheckboxMenu"
-				action="ui/input/checkboxMenu?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipCheckboxMenu"
-				for="commandButtonCheckboxMenu"
-				value="SelectCheckboxMenu is used to choose multiple items displayed in an overlay."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Editor"
-				id="commandButtonEditor"
-				action="ui/input/editor?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipEditor"
-				for="commandButtonEditor"
-				value="Editor is an input component with rich text editing features. 
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="BooleanCheckbox"
+                id="commandButtonBooleanCheckbox"
+                action="ui/input/booleanCheckbox?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipBooleanCheckbox"
+                for="commandButtonBooleanCheckbox"
+                value="SelectBooleanCheckbox is used to select a boolean value."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="CheckboxMenu"
+                id="commandButtonCheckboxMenu"
+                action="ui/input/checkboxMenu?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipCheckboxMenu"
+                for="commandButtonCheckboxMenu"
+                value="SelectCheckboxMenu is used to choose multiple items displayed in an overlay."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Editor"
+                id="commandButtonEditor"
+                action="ui/input/editor?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipEditor"
+                for="commandButtonEditor"
+                value="Editor is an input component with rich text editing features. 
 				Toolbar can be configured with custom controls."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="InputNumber"
-				id="commandButtonInputNumber"
-				action="ui/input/inputNumber?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipInputNumber"
-				for="commandButtonInputNumber"
-				value="InputNumber formats input fields with numeric Strings. It supports currency 
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="InputNumber"
+                id="commandButtonInputNumber"
+                action="ui/input/inputNumber?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipInputNumber"
+                for="commandButtonInputNumber"
+                value="InputNumber formats input fields with numeric Strings. It supports currency 
 				symbols, minimum and maximum value, negative numbers, and a lot of round methods."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Listbox"
-				id="commandButtonListbox"
-				action="ui/input/listbox?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipListbox"
-				for="commandButtonListbox"
-				value="SelectOneListbox is used to choose a single item from a list."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="ManyMenu"
-				id="commandButtonManyMenu"
-				action="ui/input/manyMenu?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipManyMenu"
-				for="commandButtonManyMenu"
-				value="SelectManyMenu is used to choose multiple items from a list."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="MultiSelectListbox"
-				id="commandButtonMultiSelectListbox"
-				action="ui/input/multiSelectListbox?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipMultiSelectListbox"
-				for="commandButtonMultiSelectListbox"
-				value="MultiSelectListbox is used to select an item from a collection of listboxes
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Listbox"
+                id="commandButtonListbox"
+                action="ui/input/listbox?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipListbox"
+                for="commandButtonListbox"
+                value="SelectOneListbox is used to choose a single item from a list."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="ManyMenu"
+                id="commandButtonManyMenu"
+                action="ui/input/manyMenu?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipManyMenu"
+                for="commandButtonManyMenu"
+                value="SelectManyMenu is used to choose multiple items from a list."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="MultiSelectListbox"
+                id="commandButtonMultiSelectListbox"
+                action="ui/input/multiSelectListbox?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipMultiSelectListbox"
+                for="commandButtonMultiSelectListbox"
+                value="MultiSelectListbox is used to select an item from a collection of listboxes
 				 that are in parent-child relationship."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="OneRadio"
-				id="commandButtonOneRadio"
-				action="ui/input/oneRadio?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipOneRadio"
-				for="commandButtonOneRadio"
-				value="SelectOneRadio is used to choose a single item from a collection."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Spinner"
-				id="commandButtonSpinner"
-				action="ui/input/spinner?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipSpinner"
-				for="commandButtonSpinner"
-				value="Spinner is used to provide an input with increment and decrement buttons on an input text."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Switch"
-				id="commandButtonSwitch"
-				action="ui/input/inputSwitch?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipSwitch"
-				for="commandButtonSwitch"
-				value="InputSwitch is used to select a boolean value."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Keyboard"
-				id="commandButtonKeyboard"
-				action="ui/input/keyboard?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipKeyboard"
-				for="commandButtonKeyboard"
-				value=""
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="ColorPicker"
-				id="commandButtonColorPicker"
-				action="ui/input/colorPicker?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipColorPicker"
-				for="commandButtonColorPicker"
-				value=""
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="KeyFilter"
-				id="commandButtonKeyFilter"
-				action="ui/input/keyFilter?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipKeyFilter"
-				for="commandButtonKeyFilter"
-				value="KeyFilter can be used to filter keyboard input on specified input components."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-		</h:form>
-	</p:panel>
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="OneRadio"
+                id="commandButtonOneRadio"
+                action="ui/input/oneRadio?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipOneRadio"
+                for="commandButtonOneRadio"
+                value="SelectOneRadio is used to choose a single item from a collection."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Spinner"
+                id="commandButtonSpinner"
+                action="ui/input/spinner?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipSpinner"
+                for="commandButtonSpinner"
+                value="Spinner is used to provide an input with increment and decrement buttons on an input text."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Switch"
+                id="commandButtonSwitch"
+                action="ui/input/inputSwitch?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipSwitch"
+                for="commandButtonSwitch"
+                value="InputSwitch is used to select a boolean value."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Keyboard"
+                id="commandButtonKeyboard"
+                action="ui/input/keyboard?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipKeyboard"
+                for="commandButtonKeyboard"
+                value=""
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="ColorPicker"
+                id="commandButtonColorPicker"
+                action="ui/input/colorPicker?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipColorPicker"
+                for="commandButtonColorPicker"
+                value=""
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="KeyFilter"
+                id="commandButtonKeyFilter"
+                action="ui/input/keyFilter?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipKeyFilter"
+                for="commandButtonKeyFilter"
+                value="KeyFilter can be used to filter keyboard input on specified input components."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+        </h:form>
+    </p:panel>
 </ui:composition>
