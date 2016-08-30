@@ -1,251 +1,251 @@
 <ui:composition
-	xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
-	<p:panel
-		header="Data"
-		toggleable="true"
-		toggleSpeed="500">
-		<h:form id="formData">
-			<p:commandButton
-				value="Carousel"
-				id="commandButtonCarousel"
-				action="ui/data/carousel?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipCarousel"
-				for="commandButtonCarousel"
-				value="Carousel displays data using a slide effect. Since v5.2.8, responsive mode, 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+    <p:panel
+        header="Data"
+        toggleable="true"
+        toggleSpeed="500">
+        <h:form id="formData">
+            <p:commandButton
+                value="Carousel"
+                id="commandButtonCarousel"
+                action="ui/data/carousel?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipCarousel"
+                for="commandButtonCarousel"
+                value="Carousel displays data using a slide effect. Since v5.2.8, responsive mode, 
 				swipe support for touch enabled devices and various customization options are available."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="DataList"
-				id="commandButtonDataList"
-				action="ui/data/dataList?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipDataList"
-				for="commandButtonDataList"
-				value="DataList displays data in a list layout."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="DataTable"
-				id="commandButtonDataTable"
-				action="ui/data/datatable/dataTablePanel?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipDataTable"
-				for="commandButtonDataTable"
-				value=""
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="PickList"
-				id="commandButtonPickList"
-				action="ui/data/pickList?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipPickList"
-				for="commandButtonPickList"
-				value="PickList is a dual list input component featuring Drag and Drop based 
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="DataList"
+                id="commandButtonDataList"
+                action="ui/data/dataList?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipDataList"
+                for="commandButtonDataList"
+                value="DataList displays data in a list layout."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="DataTable"
+                id="commandButtonDataTable"
+                action="ui/data/datatable/dataTablePanel?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipDataTable"
+                for="commandButtonDataTable"
+                value=""
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="PickList"
+                id="commandButtonPickList"
+                action="ui/data/pickList?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipPickList"
+                for="commandButtonPickList"
+                value="PickList is a dual list input component featuring Drag and Drop based 
 				reordering, transition effects, pojo support, theming filtering, captions, 
 				checkbox selection, client-server callbacks, responsive layout and more."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="GMap"
-				id="commandButtonGMap"
-				action="ui/data/gmap/gMapPanel?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipGMap"
-				for="commandButtonGMap"
-				value=""
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Mindmap"
-				id="commandButtonMindmap"
-				action="ui/data/mindmap?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipMindmap"
-				for="commandButtonMindmap"
-				value="Mindmap is an interactive mindmapping tool featuring lazy loading, callbacks, animations and more."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Ring"
-				id="commandButtonRing"
-				action="ui/data/ring?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipRing"
-				for="commandButtonRing"
-				value="Ring is a data display component with a circular animation."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="TagCloud"
-				id="commandButtonTagCloud"
-				action="ui/data/tagCloud?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipTagCloud"
-				for="commandButtonTagCloud"
-				value="TagCloud displays a collection of tags with different strengths."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="TreeTable"
-				id="commandButtonTreeTable"
-				action="ui/data/treetable/treeTablePanel?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipTreeTable"
-				for="commandButtonTreeTable"
-				value=""
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Timeline"
-				id="commandButtonTimeline"
-				action="ui/data/timeline?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipTimeline"
-				for="commandButtonTimeline"
-				value="Timeline is an interactive visualization chart to visualize events in time."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="DataGrid"
-				id="commandButtonDataGrid"
-				action="ui/data/dataGrid?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipDataGrid"
-				for="commandButtonDataGrid"
-				value="DataGrid displays data in a grid layout. Responsive mode 
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="GMap"
+                id="commandButtonGMap"
+                action="ui/data/gmap/gMapPanel?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipGMap"
+                for="commandButtonGMap"
+                value=""
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Mindmap"
+                id="commandButtonMindmap"
+                action="ui/data/mindmap?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipMindmap"
+                for="commandButtonMindmap"
+                value="Mindmap is an interactive mindmapping tool featuring lazy loading, callbacks, animations and more."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Ring"
+                id="commandButtonRing"
+                action="ui/data/ring?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipRing"
+                for="commandButtonRing"
+                value="Ring is a data display component with a circular animation."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="TagCloud"
+                id="commandButtonTagCloud"
+                action="ui/data/tagCloud?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipTagCloud"
+                for="commandButtonTagCloud"
+                value="TagCloud displays a collection of tags with different strengths."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="TreeTable"
+                id="commandButtonTreeTable"
+                action="ui/data/treetable/treeTablePanel?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipTreeTable"
+                for="commandButtonTreeTable"
+                value=""
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Timeline"
+                id="commandButtonTimeline"
+                action="ui/data/timeline?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipTimeline"
+                for="commandButtonTimeline"
+                value="Timeline is an interactive visualization chart to visualize events in time."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="DataGrid"
+                id="commandButtonDataGrid"
+                action="ui/data/dataGrid?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipDataGrid"
+                for="commandButtonDataGrid"
+                value="DataGrid displays data in a grid layout. Responsive mode 
 				is provided to optimize the display for different screen sizes."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="DataScroller"
-				id="commandButtonDataScroller"
-				action="ui/data/datascroller/basic?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipDataScroller"
-				for="commandButtonDataScroller"
-				value="DataScroller displays data with on demand loading using scroll."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Diagram"
-				id="commandButtonDiagram"
-				action="ui/data/diagram/diagramPanel?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipDiagram"
-				for="commandButtonDiagram"
-				value=""
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="OrderList"
-				id="commandButtonOrderList"
-				action="ui/data/orderList?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipOrderList"
-				for="commandButtonOrderList"
-				value="OrderList is used to sort a collection via Drag and Drop based reordering, 
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="DataScroller"
+                id="commandButtonDataScroller"
+                action="ui/data/datascroller/basic?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipDataScroller"
+                for="commandButtonDataScroller"
+                value="DataScroller displays data with on demand loading using scroll."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Diagram"
+                id="commandButtonDiagram"
+                action="ui/data/diagram/diagramPanel?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipDiagram"
+                for="commandButtonDiagram"
+                value=""
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="OrderList"
+                id="commandButtonOrderList"
+                action="ui/data/orderList?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipOrderList"
+                for="commandButtonOrderList"
+                value="OrderList is used to sort a collection via Drag and Drop based reordering, 
 				transition effects, pojo support, theme support and more."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="DataExporter"
-				id="commandButtonDataExporter"
-				action="ui/data/dataexporter/dataExporterPanel?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipDataExporter"
-				for="commandButtonDataExporter"
-				value=""
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Repeat"
-				id="commandButtonRepeat"
-				action="ui/data/repeat?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipRepeat"
-				for="commandButtonRepeat"
-				value="Repeat is an extension to standard repeat component to provide 
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="DataExporter"
+                id="commandButtonDataExporter"
+                action="ui/data/dataexporter/dataExporterPanel?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipDataExporter"
+                for="commandButtonDataExporter"
+                value=""
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Repeat"
+                id="commandButtonRepeat"
+                action="ui/data/repeat?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipRepeat"
+                for="commandButtonRepeat"
+                value="Repeat is an extension to standard repeat component to provide 
 				interoperability between JSF implementations and PrimeFaces components."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Schedule"
-				id="commandButtonSchedule"
-				action="ui/data/schedule?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipSchedule"
-				for="commandButtonSchedule"
-				value="Schedule provides an Outlook, iCal like JSF component to manage events. 
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Schedule"
+                id="commandButtonSchedule"
+                action="ui/data/schedule?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipSchedule"
+                for="commandButtonSchedule"
+                value="Schedule provides an Outlook, iCal like JSF component to manage events. 
 				Schedule is highly customizable featuring various views (month, day, week), 
 				built-in I18N, drag-drop, resize, customizable event dialog, ajax listeners for 
 				every user interaction and more."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Tree"
-				id="commandButtonTree"
-				action="ui/data/tree/treePanel?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipTree"
-				for="commandButtonTree"
-				value=""
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Horizontal Tree"
-				id="commandButtonHorizontalTree"
-				action="ui/data/horizontaltree/horizontalTreePanel?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipHorizontalTree"
-				for="commandButtonHorizontalTree"
-				value=""
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-		</h:form>
-	</p:panel>
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Tree"
+                id="commandButtonTree"
+                action="ui/data/tree/treePanel?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipTree"
+                for="commandButtonTree"
+                value=""
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Horizontal Tree"
+                id="commandButtonHorizontalTree"
+                action="ui/data/horizontaltree/horizontalTreePanel?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipHorizontalTree"
+                for="commandButtonHorizontalTree"
+                value=""
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+        </h:form>
+    </p:panel>
 </ui:composition>

@@ -1,81 +1,81 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html
-	xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
 <h:head>
-	<title>Horizontal Tree</title>
+    <title>Data - Horizontal Tree</title>
 </h:head>
 <h:body>
-	<p:panel
-		header="TreeTable"
-		toggleable="true"
-		toggleSpeed="500">
-		<h:form id="formTreeTable">
-			<p:commandButton
-				value="Basic"
-				id="commandButtonBasic"
-				action="basic?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipBasic"
-				for="commandButtonBasic"
-				value="Horizontal tree has two modes, in client mode all nodes are available at client side whereas in ajax mode only expanded nodes are available."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Icon"
-				id="commandButtonIcon"
-				action="icon?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipIcon"
-				for="commandButtonIcon"
-				value="Each node type can have different icons."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Selection"
-				id="commandButtonSelection"
-				action="selection?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipSelection"
-				for="commandButtonSelection"
-				value="Tree provides three selection modes, 'single', 'multiple' and 'checkbox'."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="Events"
-				id="commandButtonEvents"
-				action="events?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipEvents"
-				for="commandButtonEvents"
-				value="An ajax behavior callback is provided for each event such as expand, collapse, select and unselect."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-			<p:commandButton
-				value="ContextMenu"
-				id="commandButtonContextMenu"
-				action="contextMenu?faces-redirect=true"
-				styleClass="ui-priority-primary" />
-			<p:tooltip
-				id="tooltipContextMenu"
-				for="commandButtonContextMenu"
-				value="ContextMenu has special integration with Tree. Even different menus can be 
+    <p:panel
+        header="Horizontal Tree"
+        toggleable="true"
+        toggleSpeed="500">
+        <h:form id="formHorizontalTree">
+            <p:commandButton
+                value="Basic"
+                id="commandButtonBasic"
+                action="basic?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipBasic"
+                for="commandButtonBasic"
+                value="Horizontal tree has two modes, in client mode all nodes are available at client side whereas in ajax mode only expanded nodes are available."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Icon"
+                id="commandButtonIcon"
+                action="icon?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipIcon"
+                for="commandButtonIcon"
+                value="Each node type can have different icons."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Selection"
+                id="commandButtonSelection"
+                action="selection?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipSelection"
+                for="commandButtonSelection"
+                value="Tree provides three selection modes, 'single', 'multiple' and 'checkbox'."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="Events"
+                id="commandButtonEvents"
+                action="events?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipEvents"
+                for="commandButtonEvents"
+                value="An ajax behavior callback is provided for each event such as expand, collapse, select and unselect."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="ContextMenu"
+                id="commandButtonContextMenu"
+                action="contextMenu?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipContextMenu"
+                for="commandButtonContextMenu"
+                value="ContextMenu has special integration with Tree. Even different menus can be 
                 assigned to different node types by matching node types."
-				showEffect="clip"
-				hideEffect="explode"
-				trackMouse="true" />
-		</h:form>
-	</p:panel>
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+        </h:form>
+    </p:panel>
 </h:body>
 </html>
