@@ -1,0 +1,26 @@
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+    <p:panel
+        header="Charts"
+        toggleable="true"
+        toggleSpeed="500">
+        <h:form id="formCharts">
+            <p:commandButton
+                value="Area"
+                id="commandButtonArea"
+                action="ui/charts/area?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipArea"
+                for="commandButtonArea"
+                value="Area chart is a customized version of a LineChart where series are filled."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+        </h:form>
+    </p:panel>
+</ui:composition>
