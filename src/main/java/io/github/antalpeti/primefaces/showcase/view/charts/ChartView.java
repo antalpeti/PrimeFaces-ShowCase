@@ -9,6 +9,7 @@ import javax.faces.bean.ManagedBean;
 
 import org.primefaces.model.chart.Axis;
 import org.primefaces.model.chart.AxisType;
+import org.primefaces.model.chart.BarChartModel;
 import org.primefaces.model.chart.BubbleChartModel;
 import org.primefaces.model.chart.BubbleChartSeries;
 import org.primefaces.model.chart.CategoryAxis;
@@ -30,6 +31,7 @@ public class ChartView implements Serializable {
     createBubbleModels();
     createLineModels();
     createMeterGaugeModels();
+    createAnimatedModels();
   }
 
   public LineChartModel getAreaModel() {
@@ -241,5 +243,60 @@ public class ChartView implements Serializable {
     meterGaugeModel2.setShowTickLabels(false);
     meterGaugeModel2.setLabelHeightAdjust(110);
     meterGaugeModel2.setIntervalOuterRadius(100);
+  }
+
+  private LineChartModel animatedModel1;
+  private BarChartModel animatedModel2;
+
+
+  public LineChartModel getAnimatedModel1() {
+    return animatedModel1;
+  }
+
+  public BarChartModel getAnimatedModel2() {
+    return animatedModel2;
+  }
+
+  private void createAnimatedModels() {
+    animatedModel1 = initLinearModel();
+    animatedModel1.setTitle("Line Chart");
+    animatedModel1.setAnimate(true);
+    animatedModel1.setLegendPosition("se");
+    Axis yAxis = animatedModel1.getAxis(AxisType.Y);
+    yAxis.setMin(0);
+    yAxis.setMax(10);
+
+    animatedModel2 = initBarModel();
+    animatedModel2.setTitle("Bar Charts");
+    animatedModel2.setAnimate(true);
+    animatedModel2.setLegendPosition("ne");
+    yAxis = animatedModel2.getAxis(AxisType.Y);
+    yAxis.setMin(0);
+    yAxis.setMax(200);
+  }
+
+  private BarChartModel initBarModel() {
+    BarChartModel model = new BarChartModel();
+
+    ChartSeries boys = new ChartSeries();
+    boys.setLabel("Boys");
+    boys.set("2004", 120);
+    boys.set("2005", 100);
+    boys.set("2006", 44);
+    boys.set("2007", 150);
+    boys.set("2008", 25);
+
+    ChartSeries girls = new ChartSeries();
+    girls.setLabel("Girls");
+    girls.set("2004", 52);
+    girls.set("2005", 60);
+    girls.set("2006", 110);
+    girls.set("2007", 135);
+    girls.set("2008", 120);
+
+    model.addSeries(boys);
+    model.addSeries(girls);
+
+    return model;
   }
 }
