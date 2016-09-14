@@ -69,6 +69,19 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Interactive"
+                id="commandButtonInteractive"
+                action="ui/charts/interactive?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipInteractive"
+                for="commandButtonInteractive"
+                value="When a series data is clicked, information can be passed to a backing bean 
+                using itemSelect ajax behavior."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
