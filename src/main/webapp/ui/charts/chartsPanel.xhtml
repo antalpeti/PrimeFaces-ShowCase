@@ -1,87 +1,99 @@
 <ui:composition
-    xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:ui="http://java.sun.com/jsf/facelets"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:p="http://primefaces.org/ui">
-    <p:panel
-        header="Charts"
-        toggleable="true"
-        toggleSpeed="500">
-        <h:form id="formCharts">
-            <p:commandButton
-                value="Area"
-                id="commandButtonArea"
-                action="ui/charts/area?faces-redirect=true"
-                styleClass="ui-priority-primary" />
-            <p:tooltip
-                id="tooltipArea"
-                for="commandButtonArea"
-                value="Area chart is a customized version of a LineChart where series are filled."
-                showEffect="clip"
-                hideEffect="explode"
-                trackMouse="true" />
-            <p:commandButton
-                value="Bubble"
-                id="commandButtonBubble"
-                action="ui/charts/bubble?faces-redirect=true"
-                styleClass="ui-priority-primary" />
-            <p:tooltip
-                id="tooltipBubble"
-                for="commandButtonBubble"
-                value="BubbleChart is created using a BubbleChartModel."
-                showEffect="clip"
-                hideEffect="explode"
-                trackMouse="true" />
-            <p:commandButton
-                value="Line"
-                id="commandButtonLine"
-                action="ui/charts/line?faces-redirect=true"
-                styleClass="ui-priority-primary" />
-            <p:tooltip
-                id="tooltipLine"
-                for="commandButtonLine"
-                value="LineChart is displayed using a LineChartModel."
-                showEffect="clip"
-                hideEffect="explode"
-                trackMouse="true" />
-            <p:commandButton
-                value="MeterGauge"
-                id="commandButtonMeterGauge"
-                action="ui/charts/meterGauge?faces-redirect=true"
-                styleClass="ui-priority-primary" />
-            <p:tooltip
-                id="tooltipMeterGauge"
-                for="commandButtonMeterGauge"
-                value="MeterGauge chart is displayed using a MeterGaugeChartModel."
-                showEffect="clip"
-                hideEffect="explode"
-                trackMouse="true" />
-            <p:commandButton
-                value="Animate"
-                id="commandButtonAnimate"
-                action="ui/charts/animate?faces-redirect=true"
-                styleClass="ui-priority-primary" />
-            <p:tooltip
-                id="tooltipAnimate"
-                for="commandButtonAnimate"
-                value="Charts can be animated on load."
-                showEffect="clip"
-                hideEffect="explode"
-                trackMouse="true" />
-            <p:commandButton
-                value="Interactive"
-                id="commandButtonInteractive"
-                action="ui/charts/interactive?faces-redirect=true"
-                styleClass="ui-priority-primary" />
-            <p:tooltip
-                id="tooltipInteractive"
-                for="commandButtonInteractive"
-                value="When a series data is clicked, information can be passed to a backing bean 
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:p="http://primefaces.org/ui">
+  <p:panel
+    header="Charts"
+    toggleable="true"
+    toggleSpeed="500">
+    <h:form id="formCharts">
+      <p:commandButton
+        value="Area"
+        id="commandButtonArea"
+        action="ui/charts/area?faces-redirect=true"
+        styleClass="ui-priority-primary" />
+      <p:tooltip
+        id="tooltipArea"
+        for="commandButtonArea"
+        value="Area chart is a customized version of a LineChart where series are filled."
+        showEffect="clip"
+        hideEffect="explode"
+        trackMouse="true" />
+      <p:commandButton
+        value="Bubble"
+        id="commandButtonBubble"
+        action="ui/charts/bubble?faces-redirect=true"
+        styleClass="ui-priority-primary" />
+      <p:tooltip
+        id="tooltipBubble"
+        for="commandButtonBubble"
+        value="BubbleChart is created using a BubbleChartModel."
+        showEffect="clip"
+        hideEffect="explode"
+        trackMouse="true" />
+      <p:commandButton
+        value="Line"
+        id="commandButtonLine"
+        action="ui/charts/line?faces-redirect=true"
+        styleClass="ui-priority-primary" />
+      <p:tooltip
+        id="tooltipLine"
+        for="commandButtonLine"
+        value="LineChart is displayed using a LineChartModel."
+        showEffect="clip"
+        hideEffect="explode"
+        trackMouse="true" />
+      <p:commandButton
+        value="MeterGauge"
+        id="commandButtonMeterGauge"
+        action="ui/charts/meterGauge?faces-redirect=true"
+        styleClass="ui-priority-primary" />
+      <p:tooltip
+        id="tooltipMeterGauge"
+        for="commandButtonMeterGauge"
+        value="MeterGauge chart is displayed using a MeterGaugeChartModel."
+        showEffect="clip"
+        hideEffect="explode"
+        trackMouse="true" />
+      <p:commandButton
+        value="Animate"
+        id="commandButtonAnimate"
+        action="ui/charts/animate?faces-redirect=true"
+        styleClass="ui-priority-primary" />
+      <p:tooltip
+        id="tooltipAnimate"
+        for="commandButtonAnimate"
+        value="Charts can be animated on load."
+        showEffect="clip"
+        hideEffect="explode"
+        trackMouse="true" />
+      <p:commandButton
+        value="Interactive"
+        id="commandButtonInteractive"
+        action="ui/charts/interactive?faces-redirect=true"
+        styleClass="ui-priority-primary" />
+      <p:tooltip
+        id="tooltipInteractive"
+        for="commandButtonInteractive"
+        value="When a series data is clicked, information can be passed to a backing bean 
                 using itemSelect ajax behavior."
-                showEffect="clip"
-                hideEffect="explode"
-                trackMouse="true" />
-        </h:form>
-    </p:panel>
+        showEffect="clip"
+        hideEffect="explode"
+        trackMouse="true" />
+      <p:commandButton
+        value="Static"
+        id="commandButtonStatic"
+        action="ui/charts/graphicImage?faces-redirect=true"
+        styleClass="ui-priority-primary" />
+      <p:tooltip
+        id="tooltipStatic"
+        for="commandButtonStatic"
+        value="GraphicImage is capable of presenting images that are created programatically at runtime or images stored in a database."
+        showEffect="clip"
+        hideEffect="explode"
+        trackMouse="true" />
+    </h:form>
+  </p:panel>
 </ui:composition>
