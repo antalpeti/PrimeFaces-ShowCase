@@ -13,8 +13,10 @@ import org.primefaces.event.ItemSelectEvent;
 import org.primefaces.model.chart.Axis;
 import org.primefaces.model.chart.AxisType;
 import org.primefaces.model.chart.BarChartModel;
+import org.primefaces.model.chart.BarChartSeries;
 import org.primefaces.model.chart.BubbleChartModel;
 import org.primefaces.model.chart.BubbleChartSeries;
+import org.primefaces.model.chart.CartesianChartModel;
 import org.primefaces.model.chart.CategoryAxis;
 import org.primefaces.model.chart.ChartSeries;
 import org.primefaces.model.chart.LineChartModel;
@@ -38,6 +40,7 @@ public class ChartView implements Serializable {
     createAnimatedModels();
     createBarModels();
     createPieModels();
+    createCombinedModel();
   }
 
   public LineChartModel getAreaModel() {
@@ -354,10 +357,49 @@ public class ChartView implements Serializable {
   }
 
   public void itemSelect(ItemSelectEvent event) {
-    FacesMessage msg =
-        new FacesMessage(FacesMessage.SEVERITY_INFO, "Item selected", "Item Index: "
-            + event.getItemIndex() + ", Series Index:" + event.getSeriesIndex());
+    FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Item selected",
+        "Item Index: " + event.getItemIndex() + ", Series Index:" + event.getSeriesIndex());
 
     FacesContext.getCurrentInstance().addMessage(null, msg);
+  }
+
+  private CartesianChartModel combinedModel;
+
+  public CartesianChartModel getCombinedModel() {
+    return combinedModel;
+  }
+
+  private void createCombinedModel() {
+    combinedModel = new BarChartModel();
+
+    BarChartSeries boys = new BarChartSeries();
+    boys.setLabel("Boys");
+
+    boys.set("2004", 120);
+    boys.set("2005", 100);
+    boys.set("2006", 44);
+    boys.set("2007", 150);
+    boys.set("2008", 25);
+
+    LineChartSeries girls = new LineChartSeries();
+    girls.setLabel("Girls");
+
+    girls.set("2004", 52);
+    girls.set("2005", 60);
+    girls.set("2006", 110);
+    girls.set("2007", 135);
+    girls.set("2008", 120);
+
+    combinedModel.addSeries(boys);
+    combinedModel.addSeries(girls);
+
+    combinedModel.setTitle("Bar and Line");
+    combinedModel.setLegendPosition("ne");
+    combinedModel.setMouseoverHighlight(false);
+    combinedModel.setShowDatatip(false);
+    combinedModel.setShowPointLabels(true);
+    Axis yAxis = combinedModel.getAxis(AxisType.Y);
+    yAxis.setMin(0);
+    yAxis.setMax(200);
   }
 }
