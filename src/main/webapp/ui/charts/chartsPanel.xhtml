@@ -154,6 +154,18 @@
         showEffect="clip"
         hideEffect="explode"
         trackMouse="true" />
+      <p:commandButton
+        value="OHLC"
+        id="commandButtonOhlc"
+        action="ui/charts/ohlc?faces-redirect=true"
+        styleClass="ui-priority-primary" />
+      <p:tooltip
+        id="tooltipOhlc"
+        for="commandButtonOhlc"
+        value="OhlcChart is created with a OhlcChartModel."
+        showEffect="clip"
+        hideEffect="explode"
+        trackMouse="true" />
     </h:form>
   </p:panel>
 </ui:composition>
