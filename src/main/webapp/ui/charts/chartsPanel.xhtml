@@ -166,6 +166,18 @@
         showEffect="clip"
         hideEffect="explode"
         trackMouse="true" />
+      <p:commandButton
+        value="Export"
+        id="commandButtonExport"
+        action="ui/charts/export?faces-redirect=true"
+        styleClass="ui-priority-primary" />
+      <p:tooltip
+        id="tooltipExport"
+        for="commandButtonExport"
+        value="Charts are canvas based and can be exported as static images with client side api."
+        showEffect="clip"
+        hideEffect="explode"
+        trackMouse="true" />
     </h:form>
   </p:panel>
 </ui:composition>
