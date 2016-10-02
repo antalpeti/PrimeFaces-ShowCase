@@ -40,17 +40,17 @@ public class ChartView implements Serializable {
 
   @PostConstruct
   public void init() {
-    createAreaModel();
-    createBubbleModels();
     createLineModels();
-    createMeterGaugeModels();
-    createAnimatedModels();
-    createBarModels();
+    createAreaModel();
     createPieModels();
+    createDonutModels();
+    createBubbleModels();
+    createOhlcModels();
+    createMeterGaugeModels();
+    createBarModels();
+    createAnimatedModels();
     createCombinedModel();
     createDateModel();
-    createDonutModels();
-    createOhlcModels();
   }
 
   public LineChartModel getAreaModel() {
@@ -354,6 +354,7 @@ public class ChartView implements Serializable {
   private void createPieModels() {
     createPieModel1();
     createPieModel2();
+    createLivePieModel();
   }
 
   private void createPieModel1() {
@@ -616,5 +617,27 @@ public class ChartView implements Serializable {
     ohlcModel2.setCandleStick(true);
     ohlcModel2.getAxis(AxisType.X).setLabel("Sector");
     ohlcModel2.getAxis(AxisType.Y).setLabel("Index Value");
+  }
+
+  private PieChartModel livePieModel;
+
+  private void createLivePieModel() {
+    livePieModel = new PieChartModel();
+
+    livePieModel.set("Candidate 1", 540);
+    livePieModel.set("Candidate 2", 325);
+  }
+
+  public PieChartModel getLivePieModel() {
+    int random1 = (int) (Math.random() * 1000);
+    int random2 = (int) (Math.random() * 1000);
+
+    livePieModel.getData().put("Candidate 1", random1);
+    livePieModel.getData().put("Candidate 2", random2);
+
+    livePieModel.setTitle("Votes");
+    livePieModel.setLegendPosition("ne");
+
+    return livePieModel;
   }
 }

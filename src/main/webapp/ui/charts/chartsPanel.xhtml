@@ -178,6 +178,18 @@
         showEffect="clip"
         hideEffect="explode"
         trackMouse="true" />
+      <p:commandButton
+        value="Live"
+        id="commandButtonLive"
+        action="ui/charts/live?faces-redirect=true"
+        styleClass="ui-priority-primary" />
+      <p:tooltip
+        id="tooltipLive"
+        for="commandButtonLive"
+        value="Votes are updated live periodically using poll component and displayed on a pie chart."
+        showEffect="clip"
+        hideEffect="explode"
+        trackMouse="true" />
     </h:form>
   </p:panel>
 </ui:composition>
