@@ -51,6 +51,7 @@ public class ChartView implements Serializable {
     createAnimatedModels();
     createCombinedModel();
     createDateModel();
+    createZoomModel();
   }
 
   public LineChartModel getAreaModel() {
@@ -639,5 +640,21 @@ public class ChartView implements Serializable {
     livePieModel.setLegendPosition("ne");
 
     return livePieModel;
+  }
+
+  private LineChartModel zoomModel;
+
+  public LineChartModel getZoomModel() {
+    return zoomModel;
+  }
+
+  private void createZoomModel() {
+    zoomModel = initLinearModel();
+    zoomModel.setTitle("Zoom");
+    zoomModel.setZoom(true);
+    zoomModel.setLegendPosition("e");
+    Axis yAxis = zoomModel.getAxis(AxisType.Y);
+    yAxis.setMin(0);
+    yAxis.setMax(10);
   }
 }

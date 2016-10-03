@@ -190,6 +190,18 @@
         showEffect="clip"
         hideEffect="explode"
         trackMouse="true" />
+      <p:commandButton
+        value="Zoom"
+        id="commandButtonZoom"
+        action="ui/charts/zoom?faces-redirect=true"
+        styleClass="ui-priority-primary" />
+      <p:tooltip
+        id="tooltipZoom"
+        for="commandButtonZoom"
+        value="A specific part on Cartesian Charts can be zoomed using mouse drag."
+        showEffect="clip"
+        hideEffect="explode"
+        trackMouse="true" />
     </h:form>
   </p:panel>
 </ui:composition>
