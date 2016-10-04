@@ -6,26 +6,20 @@
   xmlns:f="http://java.sun.com/jsf/core"
   xmlns:p="http://primefaces.org/ui"
   xmlns:fn="http://java.sun.com/jsp/jstl/functions"
-  xmlns:pe="http://primefaces.org/ui/extensions"
->
+  xmlns:pe="http://primefaces.org/ui/extensions">
 <h:head>
   <title>Charts - GraphicImage</title>
 </h:head>
 <h:body>
-  <h:form>
+  <h3 style="margin-top: 0">JFreeChart</h3>
+  <p:graphicImage value="#{graphicImageView.chart}" />
 
-    <h3 style="margin-top: 0">JFreeChart</h3>
-    <p:graphicImage value="#{graphicImageView.chart}" />
+  <h3>JFreeChart rendered as DataURI / ViewScoped support</h3>
+  <p:graphicImage
+    value="#{graphicImageView.chart}"
+    stream="false" />
 
-    <h3>JFreeChart rendered as DataURI / ViewScoped support</h3>
-    <p:graphicImage
-      value="#{graphicImageView.chart}"
-      stream="false"
-    />
-
-    <h3>GraphicText</h3>
-    <p:graphicImage value="#{graphicImageView.graphicText}" />
-
-  </h:form>
+  <h3>GraphicText</h3>
+  <p:graphicImage value="#{graphicImageView.graphicText}" />
 </h:body>
 </html>
