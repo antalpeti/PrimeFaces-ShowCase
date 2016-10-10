@@ -1,0 +1,27 @@
+<ui:composition
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:p="http://primefaces.org/ui">
+  <p:panel
+    header="Multimedia"
+    toggleable="true"
+    toggleSpeed="500">
+    <h:form id="formMultimedia">
+      <p:commandButton
+        value="Barcode"
+        id="commandButtonBarcode"
+        action="ui/multimedia/barcode?faces-redirect=true"
+        styleClass="ui-priority-primary" />
+      <p:tooltip
+        id="tooltipBarcode"
+        for="commandButtonBarcode"
+        value="Barcode component generates various types of barcodes in PNG or SVG formats. 
+        Browsers with no SVG support fallsback to PNG automatically."
+        showEffect="clip"
+        hideEffect="explode"
+        trackMouse="true" />
+    </h:form>
+  </p:panel>
+</ui:composition>
