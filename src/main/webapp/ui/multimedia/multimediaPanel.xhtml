@@ -46,6 +46,22 @@
         showEffect="clip"
         hideEffect="explode"
         trackMouse="true" />
+      <p:commandButton
+        value="Media"
+        id="commandButtonMedia"
+        action="ui/multimedia/media?faces-redirect=true"
+        styleClass="ui-priority-primary" />
+      <p:tooltip
+        id="tooltipMedia"
+        for="commandButtonMedia"
+        value="Media component is a cross browser generic player to embed multimedia content 
+        like video and audio to JSF pages. Various formats such as flash, quicktime, windows media, 
+        realplayer and pdf are supported. Suitable player is discovered using the source extension 
+        type and a player can be specified explicitly as well. Media component can also play 
+        binary media using the StreamedContent API. "
+        showEffect="clip"
+        hideEffect="explode"
+        trackMouse="true" />
     </h:form>
   </p:panel>
 </ui:composition>
