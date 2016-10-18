@@ -58,7 +58,19 @@
         like video and audio to JSF pages. Various formats such as flash, quicktime, windows media, 
         realplayer and pdf are supported. Suitable player is discovered using the source extension 
         type and a player can be specified explicitly as well. Media component can also play 
-        binary media using the StreamedContent API. "
+        binary media using the StreamedContent API."
+        showEffect="clip"
+        hideEffect="explode"
+        trackMouse="true" />
+      <p:commandButton
+        value="Compare"
+        id="commandButtonCompare"
+        action="ui/multimedia/compare?faces-redirect=true"
+        styleClass="ui-priority-primary" />
+      <p:tooltip
+        id="tooltipCompare"
+        for="commandButtonCompare"
+        value="ImageCompare provides a graphical interface to compare to similar images."
         showEffect="clip"
         hideEffect="explode"
         trackMouse="true" />
