@@ -33,6 +33,19 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Multiple"
+                id="commandButtonMultiple"
+                action="ui/file/multiple?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipMultiple"
+                for="commandButtonMultiple"
+                value="Multiple mode allows multiple files to be selected from the native file dialog. 
+                Note that legacy browsers do not support multiple selection."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
