@@ -58,6 +58,18 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="DragDrop"
+                id="commandButtonDragDrop"
+                action="ui/file/dnd?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipDragDrop"
+                for="commandButtonDragDrop"
+                value="In supported browsers, a file can be selected by dragdrop from filesystem. FileUpload component itself is the drop zone."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
