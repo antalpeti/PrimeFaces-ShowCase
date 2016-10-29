@@ -70,6 +70,20 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Download"
+                id="commandButtonDownload"
+                action="ui/file/download?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipDownload"
+                for="commandButtonDownload"
+                value="FileDownload is used to stream binary contents like files stored in database to the client. FileDownload is used by 
+                attaching it to any JSF command component like button or a link. Additionally presentation of download can be configured 
+                with the contentDisposition attribute that takes either 'attachment' or 'inline' as a value."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
