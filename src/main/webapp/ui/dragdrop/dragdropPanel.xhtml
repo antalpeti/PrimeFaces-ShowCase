@@ -47,6 +47,21 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Custom"
+                id="commandButtonCustom"
+                action="ui/dragdrop/custom?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipCustom"
+                for="commandButtonCustom"
+                value="This sample demonstrates how to extend PrimeFaces with javascript. 
+                Tree component displays the available columns which are draggable. Where as column 
+                headers have drop targets and dropping a treenode onto one of these adds the 
+                related property column to the datatable. Column headers can also be moved back to the tree."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
