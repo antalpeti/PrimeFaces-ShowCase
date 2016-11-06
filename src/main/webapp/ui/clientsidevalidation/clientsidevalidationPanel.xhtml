@@ -1,0 +1,34 @@
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+    <p:panel
+        header="Client Side Validation"
+        toggleable="true"
+        toggleSpeed="500">
+        <h:form id="formClientSideValidation">
+            <p:commandButton
+                value="Basic"
+                id="commandButtonBasic"
+                action="ui/clientsidevalidation/basic?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipBasic"
+                for="commandButtonBasic"
+                value="Compatible with Server Side Implementation. 
+                Conversion and Validation happens at client side.
+                Partial Processing support for Ajax.
+                I18n support along with component specific messages.
+                Client side Renderers for message components.
+                Easy to write custom client converters and validators.
+                Global or Component based enable/disable.
+                Little footprint using HTML5.
+                Advanced Bean Validation Integration."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+        </h:form>
+    </p:panel>
+</ui:composition>
