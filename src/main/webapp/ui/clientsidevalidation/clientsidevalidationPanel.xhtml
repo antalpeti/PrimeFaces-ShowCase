@@ -42,6 +42,19 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Custom"
+                id="commandButtonCustom"
+                action="ui/clientsidevalidation/custom?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipCustom"
+                for="commandButtonCustom"
+                value="A custom client converter or a validator can be implemented easily. 
+                Both JSF and Bean Validation APIs are supported."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
