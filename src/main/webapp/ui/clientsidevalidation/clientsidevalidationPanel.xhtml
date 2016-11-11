@@ -55,6 +55,19 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Event"
+                id="commandButtonEvent"
+                action="ui/clientsidevalidation/event?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipEvent"
+                for="commandButtonEvent"
+                value="Validations can be triggered instantly without needing a 
+                button/link click using p:clientValidator."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
