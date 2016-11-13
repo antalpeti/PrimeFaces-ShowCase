@@ -8,6 +8,8 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 
+import org.primefaces.context.RequestContext;
+
 import io.github.antalpeti.primefaces.showcase.domain.Car;
 import io.github.antalpeti.primefaces.showcase.service.CarService;
 
@@ -31,5 +33,9 @@ public class DFCarsView implements Serializable {
 
   public void setService(CarService service) {
     this.service = service;
+  }
+
+  public void selectCarFromDialog(Car car) {
+    RequestContext.getCurrentInstance().closeDialog(car);
   }
 }

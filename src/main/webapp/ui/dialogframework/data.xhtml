@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+  <title>Data</title>
+</h:head>
+
+<h:body>
+  <h:form>
+    <p:growl
+      id="growl"
+      showDetail="true" />
+
+    <p:commandButton
+      value="Select Car"
+      icon="ui-icon-extlink"
+      actionListener="#{dfView.chooseCar}">
+      <p:ajax
+        event="dialogReturn"
+        listener="#{dfView.onCarChosen}"
+        update="growl" />
+    </p:commandButton>
+  </h:form>
+  
+</h:body>
+
+</html>
