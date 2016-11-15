@@ -45,6 +45,19 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Nested"
+                id="commandButtonNested"
+                action="ui/dialogframework/nested?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipNested"
+                for="commandButtonNested"
+                value="Nested dialogs are supported to allow creating a dialog from another dialog. 
+                Demo here has 3 level of nested dialogs where last dialog returns data back to the root."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
