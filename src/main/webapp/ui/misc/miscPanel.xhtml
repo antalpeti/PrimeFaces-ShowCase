@@ -1,0 +1,28 @@
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+    <p:panel
+        header="Misc"
+        toggleable="true"
+        toggleSpeed="500">
+        <h:form id="formMisc">
+            <p:commandButton
+                value="Responsive"
+                id="commandButtonResponsive"
+                action="ui/misc/responsive?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipResponsive"
+                for="commandButtonResponsive"
+                value="In combination with Grid CSS, ui-fluid style class provides 
+                 fluid width for efficient use of space in screen. This example demonstrates
+                 ui-fluid in combination with the components having built-in responsive modes."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+        </h:form>
+    </p:panel>
+</ui:composition>
