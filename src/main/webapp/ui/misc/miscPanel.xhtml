@@ -23,6 +23,21 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Cache"
+                id="commandButtonCache"
+                action="ui/misc/cache?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipCache"
+                for="commandButtonCache"
+                value="Cache component is used to reduce page load time by caching the content 
+                in a global cache after the initial rendering. Various cache providers are supported 
+                like ehcache and hazelcast. In this example, toolbar component is cached and output 
+                would be retrieved from cache."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
