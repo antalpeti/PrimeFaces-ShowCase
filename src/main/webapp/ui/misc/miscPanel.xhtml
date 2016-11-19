@@ -24,6 +24,19 @@
                 hideEffect="explode"
                 trackMouse="true" />
             <p:commandButton
+                value="BlockUI"
+                id="commandButtonBlockUI"
+                action="ui/misc/blockUI?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipBlockUI"
+                for="commandButtonBlockUI"
+                value="BlockUI blocks other components. It can be used with 
+                special ajax integration or manually with client side api."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
                 value="Cache"
                 id="commandButtonCache"
                 action="ui/misc/cache?faces-redirect=true"
