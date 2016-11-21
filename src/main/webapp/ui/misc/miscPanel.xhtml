@@ -63,6 +63,19 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Clock"
+                id="commandButtonClock"
+                action="ui/misc/clock?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipClock"
+                for="commandButtonClock"
+                value="Clock displays server or client datetime live. AutoSync feature 
+                in server mode can sync the clock with server periodically."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
