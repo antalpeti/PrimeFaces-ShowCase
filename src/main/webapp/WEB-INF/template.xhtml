@@ -1,0 +1,31 @@
+<!DOCTYPE html >
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:p="http://primefaces.org/ui">
+<h:head>
+  <title>PrimeFaces ShowCase</title>
+  <ui:insert name="head" />
+</h:head>
+
+<h:body>
+
+  <div id="CONTENTSIDE">
+    <div id="CONTENTSIDEindent">
+
+      <ui:insert name="content">
+
+        <ui:insert name="title" />
+        <ui:insert name="description" />
+        <ui:insert name="implementation" />
+
+      </ui:insert>
+
+    </div>
+  </div>
+
+  <ui:insert name="body"></ui:insert>
+</h:body>
+</html>

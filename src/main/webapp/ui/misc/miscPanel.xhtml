@@ -114,6 +114,21 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="ExceptionHandler"
+                id="commandButtonExceptionHandler"
+                action="ui/misc/exceptionHandler?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipExceptionHandler"
+                for="commandButtonExceptionHandler"
+                value="PrimeFaces provides a powerful ExceptionHandler out of the box featuring support 
+                for ajax and non-ajax requests, ability to use error-page configuration in web.xml, an EL 
+                extension called to provide information about the exception and the p:ajaxExceptionHandler 
+                component to handle ajax exceptions at the same page."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
