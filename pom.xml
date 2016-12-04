@@ -27,11 +27,14 @@
       <artifactId>primefaces</artifactId>
       <version>6.0.RC4</version>
     </dependency>
+    
+    <!-- Themes -->
     <dependency>
       <groupId>org.primefaces.themes</groupId>
       <artifactId>all-themes</artifactId>
       <version>1.0.10</version>
     </dependency>
+    
     <dependency>
       <groupId>org.primefaces.extensions</groupId>
       <artifactId>primefaces-extensions</artifactId>
@@ -57,6 +60,8 @@
       <artifactId>jfreechart</artifactId>
       <version>1.0.0</version>
     </dependency>
+    
+    <!-- Barcode -->
     <dependency>
       <groupId>net.glxn</groupId>
       <artifactId>qrgen</artifactId>
@@ -66,6 +71,13 @@
       <groupId>net.sf.barcode4j</groupId>
       <artifactId>barcode4j-light</artifactId>
       <version>2.1</version>
+    </dependency>
+    
+    <!-- FeedReader -->
+    <dependency>
+      <groupId>rome</groupId>
+      <artifactId>rome</artifactId>
+      <version>1.0</version>
     </dependency>
   </dependencies>
 
