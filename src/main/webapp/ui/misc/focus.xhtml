@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:p="http://primefaces.org/ui"
+  xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+<h:head>
+  <title>Misc - Focus</title>
+</h:head>
+
+<h:body>
+  <h:form>
+    <p:panel
+      id="panel"
+      header="Register">
+
+      <p:focus context="panel" />
+
+      <p:messages />
+
+      <h:panelGrid columns="3">
+        <p:outputLabel
+          for="username"
+          value="Username" />
+        <p:inputText
+          id="username"
+          value="#{miscFocusView.username}"
+          required="true"
+          label="Firstname">
+          <f:validateLength minimum="2" />
+        </p:inputText>
+        <p:message for="username" />
+
+        <p:outputLabel
+          for="email"
+          value="Email" />
+        <p:inputText
+          id="email"
+          value="#{miscFocusView.email}"
+          required="true"
+          label="Surname" />
+        <p:message for="email" />
+      </h:panelGrid>
+
+      <p:commandButton
+        id="submitButton"
+        value="Save"
+        update="@parent"
+        actionListener="#{miscFocusView.save}" />
+    </p:panel>
+  </h:form>
+</h:body>
+
+</html>

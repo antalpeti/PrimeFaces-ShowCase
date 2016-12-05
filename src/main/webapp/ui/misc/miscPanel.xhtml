@@ -156,6 +156,22 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Focus"
+                id="commandButtonFocus"
+                action="ui/misc/focus?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipFocus"
+                for="commandButtonFocus"
+                value="Focus manages element focus in forms. By default first visible and enabled 
+                input element(e.g. text, textarea, select) is chosen to receive focus automatically. 
+                It is also possible to explicitly declare the component to receive focus via the 
+                for attribute. Focus is also aware of failed validations, first invalid 
+                input component receives a focus automatically."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
