@@ -172,6 +172,20 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Hotkey"
+                id="commandButtonHotkey"
+                action="ui/misc/hotkey?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipHotkey"
+                for="commandButtonHotkey"
+                value="Hotkey is used to bind a key or a key combination to an client side or server 
+                side event via ajax. In first example use 'left' and 'right' keys to switch images 
+                and in second example you can do an ajax request with the (ctrl+shift+s) combination."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
