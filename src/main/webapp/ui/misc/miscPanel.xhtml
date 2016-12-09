@@ -199,6 +199,23 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="ImportConstants"
+                id="commandButtonImportConstants"
+                action="ui/misc/importConstants?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipImportConstants"
+                for="commandButtonImportConstants"
+                value="In older EL versions (&lt; 3.0), it's not possible to use constants or any 
+                other static fields/methods in an EL expression. As it is not really 'cool' to 
+                create beans with getter/setter for each constants class, we provide an utils 
+                tag which allows to import constant fields in a page.
+                The constants can be accessed via the name of the class (default setting) 
+                or via a custom name (var attribute)."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
