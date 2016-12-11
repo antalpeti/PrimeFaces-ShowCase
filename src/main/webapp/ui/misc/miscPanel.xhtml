@@ -233,6 +233,19 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Lifecycle"
+                id="commandButtonLifecycle"
+                action="ui/misc/lifecycle?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipLifecycle"
+                for="commandButtonLifecycle"
+                value="Lifecycle is a utility component which displays the execution time of each JSF phase. 
+                It also synchronizes automatically after each AJAX request."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
