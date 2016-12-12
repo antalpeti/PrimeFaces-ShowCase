@@ -246,6 +246,19 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Log"
+                id="commandButtonLog"
+                action="ui/misc/log?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipLog"
+                for="commandButtonLog"
+                value="Log component is a visual console to display internal logs of PrimeFaces. 
+                Using log client side API, you can also use the component."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>

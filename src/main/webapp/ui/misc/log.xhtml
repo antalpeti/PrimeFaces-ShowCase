@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:p="http://primefaces.org/ui"
+  xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+<h:head>
+  <title>Misc - Log</title>
+</h:head>
+
+<h:body>
+  <p:log id="log" />
+
+  <h3 style="margin-top: 0">Client Side API</h3>
+  <p:commandButton
+    type="button"
+    id="info"
+    value="Info"
+    onclick="PrimeFaces.info('This is an info message.')" />
+  <p:commandButton
+    type="button"
+    id="warn"
+    value="Warn"
+    onclick="PrimeFaces.warn('This is a warn message.')" />
+  <p:commandButton
+    type="button"
+    id="debug"
+    value="Debug"
+    onclick="PrimeFaces.debug('This is a debug message.')" />
+  <p:commandButton
+    type="button"
+    id="error"
+    value="Error"
+    onclick="PrimeFaces.error('This is an error message.')" />
+
+  <h3>Ajax Request</h3>
+  <h:form id="form">
+    <h:panelGrid
+      id="grid"
+      columns="4"
+      cellpadding="5">
+      <p:outputLabel
+        for="name"
+        value="Name:"
+        style="font-weight:bold" />
+      <p:inputText id="name" />
+      <p:commandButton
+        value="Submit"
+        update="grid" />
+    </h:panelGrid>
+  </h:form>
+</h:body>
+
+</html>
