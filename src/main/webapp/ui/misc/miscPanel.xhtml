@@ -275,6 +275,18 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Printer"
+                id="commandButtonPrinter"
+                action="ui/misc/printer?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipPrinter"
+                for="commandButtonPrinter"
+                value="Printer is used to print a certain component instead of the whole page."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
