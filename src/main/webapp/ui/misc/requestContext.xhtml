@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:p="http://primefaces.org/ui"
+  xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+<h:head>
+  <title>Misc - RequestContext</title>
+</h:head>
+
+<h:body>
+  <h:form id="form">
+    <p:panel
+      id="panel"
+      header="New User"
+      style="margin-bottom:10px;">
+      <p:messages />
+      <h:panelGrid
+        columns="2"
+        cellpadding="5">
+        <p:outputLabel
+          for="firstname"
+          value="Firstname:" />
+        <p:inputText
+          id="firstname"
+          value="#{miscRequestContextView.user.firstname}"
+          required="true" />
+
+        <p:outputLabel
+          for="surname"
+          value="Lastname:" />
+        <p:inputText
+          id="surname"
+          value="#{miscRequestContextView.user.lastname}"
+          required="true" />
+      </h:panelGrid>
+    </p:panel>
+
+    <p:commandButton
+      value="Save"
+      actionListener="#{miscRequestContextView.save}"
+      oncomplete="handleComplete(xhr, status, args)" />
+
+    <p:log />
+  </h:form>
+</h:body>
+
+</html>
