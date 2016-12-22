@@ -308,7 +308,21 @@
             <p:tooltip
                 id="tooltipRequestContext"
                 for="commandButtonRequestContext"
-                value=""
+                value="RequestContext is a helper with various utilities. Update component(s) programmatically. Execute javascript from beans.
+                Add ajax callback parameters as JSON. ScrollTo a specific component after ajax update. Invoke conditional javascript on page load."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
+            <p:commandButton
+                value="ResetInput"
+                id="commandButtonResetInput"
+                action="ui/misc/resetInput?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipResetInput"
+                for="commandButtonResetInput"
+                value="Input components keep their local values at state when validation fails. ResetInput is used to clear the cached 
+                values from state so that components retrieve their values from the backing bean model instead."
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
