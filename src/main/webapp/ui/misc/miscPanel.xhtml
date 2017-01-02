@@ -374,6 +374,19 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Sticky"
+                id="commandButtonSticky"
+                action="ui/misc/sticky?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipSticky"
+                for="commandButtonSticky"
+                value="Sticky component positions the target component as fixed so that the 
+                component stays in window viewport during scrolling. Scroll down to see the sticky toolbar."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
