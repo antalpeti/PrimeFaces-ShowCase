@@ -399,6 +399,20 @@
                 showEffect="clip"
                 hideEffect="explode"
                 trackMouse="true" />
+            <p:commandButton
+                value="Watermark"
+                id="commandButtonWatermark"
+                action="ui/misc/watermark?faces-redirect=true"
+                styleClass="ui-priority-primary" />
+            <p:tooltip
+                id="tooltipWatermark"
+                for="commandButtonWatermark"
+                value="Watermark displays a hint about input fields by using native placeholder in modern 
+                browsers and a javascript based solution in legacy ones for browser compatibility. In case 
+                legacy browsers don't need to be supported, placeholder attribute of input components should be preferred."
+                showEffect="clip"
+                hideEffect="explode"
+                trackMouse="true" />
         </h:form>
     </p:panel>
 </ui:composition>
